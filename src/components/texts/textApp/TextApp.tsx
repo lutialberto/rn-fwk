@@ -1,18 +1,15 @@
-import { StyleSheet, Text, TextProps } from 'react-native'
+import { Text, TextProps } from 'react-native'
 import React from 'react'
-import { Colors, useTheme } from 'hooks/theme'
-import { Fonts } from 'hooks/appStarting/fonts/FontFamily';
+import { useTextStyles } from '../hooks/useTextStyles';
 
 const TextApp = (props: TextProps) => {
-  const { getColors } = useTheme();
-  const colors = getColors();
-  const styles = getStyles(colors);
+  const { styles } = useTextStyles();
 
   return (
     <Text
       {...props}
       style={[
-        styles.text,
+        styles.textDefault,
         props.style,
       ]}
     >
@@ -22,13 +19,3 @@ const TextApp = (props: TextProps) => {
 }
 
 export default TextApp
-
-const getStyles = (colors: Colors) => {
-  return StyleSheet.create({
-    text: {
-      color: colors.themeColors.fontColor,
-      fontSize: 16,
-      fontFamily: Fonts.PrimaryRegular,
-    },
-  });
-};
