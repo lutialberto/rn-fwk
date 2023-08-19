@@ -1,6 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
+import ScreenContainerApp from 'components/containers/screenContainer/ScreenContainerApp';
 import { useAppStarting } from 'hooks/appStarting/useAppStarting';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 
 export default function App() {
   const { appReady } = useAppStarting();
@@ -10,17 +10,14 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
+    <ScreenContainerApp style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    </ScreenContainerApp>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
