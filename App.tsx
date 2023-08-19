@@ -1,7 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
+import { useAppStarting } from 'hooks/appStarting/useAppStarting';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const { appReady } = useAppStarting();
+
+  if (!appReady) {
+    return <Text>Loading...</Text>
+  }
+
   return (
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
