@@ -1,24 +1,13 @@
-import ScreenContainerApp from 'components/containers/screenContainer/ScreenContainerApp';
 import { useAppStarting } from 'hooks/appStarting/useAppStarting';
-import { StyleSheet, Text } from 'react-native';
+import MainNavigator from 'navigation/MainNavigator';
+import SplashScreen from 'screens/splash/SplashScreen';
 
 export default function App() {
   const { appReady } = useAppStarting();
 
-  if (!appReady) {
-    return <Text>Loading...</Text>
-  }
+  if (!appReady) return <SplashScreen />
 
   return (
-    <ScreenContainerApp style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </ScreenContainerApp>
+    <MainNavigator />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
