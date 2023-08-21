@@ -3,8 +3,7 @@ import { Fonts } from 'hooks/appStarting/fonts/FontFamily';
 import { Colors, useTheme } from 'hooks/theme';
 
 export const useTextStyles = () => {
-  const { getColors } = useTheme();
-  const colors = getColors();
+  const { colors } = useTheme();
   const styles = getStyles(colors);
 
   return {

@@ -9,8 +9,7 @@ const ModalApp = ({
   childrenContainerStyle,
   ...props
 }: ModalFwkProps) => {
-  const { getColors } = useTheme();
-  const colors = getColors();
+  const { colors } = useTheme();
   const styles = getStyles(colors);
 
   return (

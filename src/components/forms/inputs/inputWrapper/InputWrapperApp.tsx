@@ -6,8 +6,7 @@ import TextApp from 'components/texts/textApp/TextApp'
 import { Colors, useTheme } from 'hooks/theme'
 
 const InputWrapperApp = ({ children, error, label }: InputWrapperAppProps) => {
-  const { getColors } = useTheme()
-  const colors = getColors()
+  const { colors } = useTheme()
   const styles = getStyles(colors)
 
   return (

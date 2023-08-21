@@ -7,25 +7,28 @@ import {NONE_THEME_PROPS, THEMES_PROPS, THEME_NAME_OPTIONS} from './Constants';
 export interface ThemeState {
   selectedTheme: ThemeNameOptions;
   themeOptions: readonly ThemeNameOptions[];
-  getColors: () => Colors;
+  colors: Colors;
   changeTheme: (newTheme: ThemeNameOptions) => void;
 }
 
 export const useTheme = create<ThemeState>()(
   persist(
-    (set, get) => ({
+    set => ({
       selectedTheme: THEME_NAME_OPTIONS[0],
       themeOptions: THEME_NAME_OPTIONS,
-      getColors: () => {
-        const currentTheme = get().selectedTheme;
-        const themeColors = THEMES_PROPS[currentTheme];
-        const colors: Colors = {
-          nonThemeColors: NONE_THEME_PROPS,
-          themeColors,
-        };
-        return colors;
+      colors: {
+        nonThemeColors: NONE_THEME_PROPS,
+        themeColors: THEMES_PROPS[THEME_NAME_OPTIONS[0]],
       },
-      changeTheme: (newTheme: ThemeNameOptions) => set(() => ({selectedTheme: newTheme})),
+      changeTheme: (newTheme: ThemeNameOptions) => set(
+        () => ({
+          selectedTheme: newTheme,
+          colors: {
+            nonThemeColors: NONE_THEME_PROPS,
+            themeColors: THEMES_PROPS[newTheme],
+          },
+        })
+      ),
     }),
     {
       name: 'theme-storage',

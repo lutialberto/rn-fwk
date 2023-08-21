@@ -11,8 +11,7 @@ const BottomSheetApp = ({
   childrenContainerStyle,
   visibleContainerStyle,
 }: ModalFwkProps) => {
-  const { getColors } = useTheme();
-  const colors = getColors();
+  const { colors } = useTheme();
   const styles = getStyles(colors);
   return (
     <ModalFwk

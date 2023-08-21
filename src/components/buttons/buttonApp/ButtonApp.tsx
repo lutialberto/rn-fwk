@@ -16,8 +16,7 @@ const ButtonApp = ({
   labelComponent,
   ...props
 }: ButtonAppProps) => {
-  const { getColors } = useTheme();
-  const colors = getColors();
+  const { colors } = useTheme();
   const styles = getStyles(colors);
 
   const { getContainerStyle, getLabelStyle } = useButtonVariants<Variant>({

@@ -4,8 +4,7 @@ import { SpinnerFwkProps } from 'fwk/components/containers/loading/spinner/Spinn
 import { useTheme } from 'hooks/theme'
 
 const SpinnerApp = (props: SpinnerFwkProps) => {
-  const { getColors } = useTheme();
-  const colors = getColors();
+  const { colors } = useTheme();
 
   return (
     <SpinnerFwk
