@@ -3,6 +3,27 @@ import React from 'react';
 import CloseIcon from './CloseIcon.svg';
 import { ModalFwkProps } from './ModalFwkProps';
 
+/**
+ * @description Framework modal component
+ * @example
+ * <ModalFwk
+ *  modalProps={{ visible: true, onDismiss: () => { } }}
+ *  closeIconColor={'#000'}
+ *  transparentAreaBackgroundColor={'#000'}
+ *  variant={'modal'}
+ *  visibleContainerStyle={styles.visibleContainer}
+ *  childrenContainerStyle={styles.childrenContainer}
+ * >
+ *  <Text>GenericModal</Text>
+ * </ModalFwk>
+ * @param modalProps - modal props
+ * @param children - modal children
+ * @param childrenContainerStyle - style of the children container
+ * @param visibleContainerStyle - style of the visible container
+ * @param closeIconColor - color of the close icon
+ * @param transparentAreaBackgroundColor - color of the transparent area
+ * @param variant - modal variant
+ */
 const ModalFwk = ({
   modalProps,
   children,

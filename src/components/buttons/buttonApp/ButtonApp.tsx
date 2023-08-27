@@ -8,6 +8,29 @@ import { Colors, useTheme } from 'hooks/theme';
 import { vw } from 'fwk/constants/Dimentions';
 import { Variant } from './models/Variant';
 
+/**
+ * @description Application button component
+ * @example Minimal Example
+ * <ButtonApp onPress={() => { }} />
+ * @example Full Example
+ * <ButtonApp
+ *  variant={'default'}
+ *  enabled={true}
+ *  onPress={() => { }}
+ *  label={'Button'}
+ *  icon={<Icon name={'check'} />}
+ *  containerStyle={styles.container}
+ *  labelStyle={styles.label}
+ * />
+ * @param variant - button variant
+ * @param enabled - button enabled
+ * @param onPress - function to execute when the button is pressed and enabled
+ * @param label - button label
+ * @param icon - button icon
+ * @param containerStyle - style of the button container
+ * @param labelStyle - style of the button label
+ */
+
 const ButtonApp = ({
   variant = 'default',
   enabled = true,

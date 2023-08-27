@@ -1,5 +1,12 @@
 import { StyleProp, TextProps, ViewProps } from 'react-native';
 
+/**
+ * @description This is a helper hook to get the styles of the button variants
+ * @param props.baseStyles The base styles of the button
+ * @param props.containerStyles The container styles of the button
+ * @param props.labelStyles The label styles of the button
+ * @returns The styles of the button variants
+ */
 export function useButtonVariants<T extends string> (props:{
   baseStyles: {
     container: StyleProp<ViewProps>;

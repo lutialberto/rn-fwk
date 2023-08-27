@@ -6,6 +6,20 @@ import InputWrapperApp from '../inputWrapper/InputWrapperApp'
 import { InputTextAppProps } from './InputTextAppProps'
 import { FieldValues } from 'react-hook-form'
 
+/**
+ * @description Application input text component
+ * @example
+ * <InputTextApp
+ *  formControl={{ control: control, name: 'genericName' }}
+ *  textInput={{ placeholder: 'GenericPlaceholder' }}
+ *  label='GenericLabel'
+ *  error='GenericError'
+ * />
+ * @param formControl - form control of the input text
+ * @param textInput - text input props
+ * @param label - input wrapper label
+ * @param error - input wrapper error
+ */
 function InputTextApp<T extends FieldValues>(props: InputTextAppProps<T>) {
   const { styles } = useTextStyles()
   return (

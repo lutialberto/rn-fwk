@@ -4,6 +4,25 @@ import { ModalFwkProps } from 'fwk/components/containers/modals/modal/ModalFwkPr
 import { Colors, useTheme } from 'hooks/theme';
 import ModalFwk from 'fwk/components/containers/modals/modal/ModalFwk';
 
+/**
+ * @description Application modal component
+ * @example Minimal Example
+ * <ModalApp modalProps={{ visible: true, onDismiss: () => { } }} >
+ *  <Text>GenericModal</Text>
+ * </ModalApp>
+ * @example Full Example
+ * <ModalApp
+ *  modalProps={{ visible: true, onDismiss: () => { } }}
+ *  visibleContainerStyle={styles.visibleContainer}
+ *  childrenContainerStyle={styles.childrenContainer}
+ * >
+ *  <Text>GenericModal</Text>
+ * </ModalApp>
+ * @param modalProps - modal props
+ * @param children - modal children
+ * @param childrenContainerStyle - style of the children container
+ * @param visibleContainerStyle - style of the visible container
+ */
 const ModalApp = ({
   visibleContainerStyle,
   childrenContainerStyle,

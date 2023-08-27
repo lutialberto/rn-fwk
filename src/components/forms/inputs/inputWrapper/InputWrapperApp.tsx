@@ -6,6 +6,19 @@ import TextApp from 'components/texts/textApp/TextApp'
 import { Colors, useTheme } from 'hooks/theme'
 import { useTextStyles } from 'components/texts/hooks/useTextStyles'
 
+/**
+ * @description Application input wrapper component
+ * @example
+ * <InputWrapperApp
+ *  label='GenericInputWrapper'
+ *  error='GenericError'
+ * >
+ *  <Text>GenericInputWrapper</Text>
+ * </InputWrapperApp>
+ * @param children - input wrapper children
+ * @param error - input wrapper error
+ * @param label - input wrapper label
+ */
 const InputWrapperApp = ({ children, error, label }: InputWrapperAppProps) => {
   const { colors } = useTheme()
   const styles = getStyles(colors)

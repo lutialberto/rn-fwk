@@ -1,5 +1,9 @@
 import { useFonts } from 'expo-font';
 
+/**
+ * @description hook to load fonts
+ * @returns {Object} fontsLoaded: boolean
+ */
 export const useFontsApp = () => {
   const [fontsLoaded] = useFonts({
     'Primary-Thin': require('assets/fonts/Inter-Thin.ttf'), 

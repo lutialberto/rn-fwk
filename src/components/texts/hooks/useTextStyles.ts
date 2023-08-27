@@ -2,6 +2,11 @@ import { StyleSheet } from 'react-native'
 import { Fonts } from 'hooks/appStarting/fonts/FontFamily';
 import { Colors, useTheme } from 'hooks/theme';
 
+/**
+ * @description - This hook is used to get the styles for the text component
+ * @returns - styles and colors
+ * @example - const { styles, colors } = useTextStyles();
+ */
 export const useTextStyles = () => {
   const { colors } = useTheme();
   const styles = getStyles(colors);

@@ -4,6 +4,15 @@ import { ScreenContainerFwkProps } from 'fwk/components/containers/screenContain
 import { Colors, useTheme } from 'hooks/theme';
 import ScreenContainerFwk from 'fwk/components/containers/screenContainer/ScreenContainerFwk';
 
+/**
+ * @description Application screen container component
+ * @example
+ * <ScreenContainerApp style={styles.container}>
+ *  <Text>GenericScreenContainer</Text>
+ * </ScreenContainerApp>
+ * @param children - screen container children
+ * @param style - style of the screen container
+ */
 const ScreenContainerApp = ({ children, style }: ScreenContainerFwkProps) => {
   const { colors } = useTheme();
   const styles = getStyles(colors);

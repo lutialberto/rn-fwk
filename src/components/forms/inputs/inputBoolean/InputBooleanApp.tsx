@@ -8,6 +8,20 @@ import { InputBooleanAppProps } from './InputBooleanAppProps';
 import TextApp from 'components/texts/textApp/TextApp';
 import { useTextStyles } from 'components/texts/hooks/useTextStyles';
 
+/**
+ * @description Application input boolean component
+ * @example
+ * <InputBooleanApp
+ *  formControl={{ control: control, name: 'genericName' }}
+ *  booleanInput={{ enabled: true }}
+ *  label='GenericLabel'
+ *  error='GenericError'
+ * />
+ * @param formControl - form control of the input boolean
+ * @param booleanInput - boolean input props
+ * @param label - input wrapper label
+ * @param error - input wrapper error
+ */
 function InputBooleanApp<T extends FieldValues>(props: InputBooleanAppProps<T>) {
   const { colors } = useTheme();
   const styles = getStyles(colors);

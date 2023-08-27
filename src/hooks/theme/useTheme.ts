@@ -11,6 +11,10 @@ export interface ThemeState {
   changeTheme: (newTheme: ThemeNameOptions) => void;
 }
 
+/**
+ * @description - This hook is used to get the theme
+ * @example - const { selectedTheme, themeOptions, colors, changeTheme } = useTheme();
+ */
 export const useTheme = create<ThemeState>()(
   persist(
     set => ({
