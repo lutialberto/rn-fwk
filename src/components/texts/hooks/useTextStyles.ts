@@ -19,5 +19,9 @@ const getStyles = (colors: Colors) => {
       fontSize: 16,
       fontFamily: Fonts.PrimaryRegular,
     },
+    inputError: {
+      color: colors.nonThemeColors.red,
+      fontSize: 12,
+    },
   });
 };

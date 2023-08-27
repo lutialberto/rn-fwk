@@ -4,15 +4,17 @@ import { InputWrapperAppProps } from './InputWrapperAppProps'
 import InputWrapperFwk from 'fwk/components/forms/inputWrapper/InputWrapperFwk'
 import TextApp from 'components/texts/textApp/TextApp'
 import { Colors, useTheme } from 'hooks/theme'
+import { useTextStyles } from 'components/texts/hooks/useTextStyles'
 
 const InputWrapperApp = ({ children, error, label }: InputWrapperAppProps) => {
   const { colors } = useTheme()
   const styles = getStyles(colors)
+  const { styles: textStyles } = useTextStyles();
 
   return (
     <InputWrapperFwk
       label={{ component: <TextApp style={styles.label}>{label}</TextApp> }}
-      error={{ value: error ?? '', component: <TextApp style={styles.error}>{error}</TextApp> }}
+      error={{ value: error ?? '', component: <TextApp style={textStyles.inputError}>{error}</TextApp> }}
       childrenStyle={[styles.children, !!error && { borderBottomColor: colors.nonThemeColors.red }]}
     >
       {children}
@@ -29,8 +31,4 @@ const getStyles = (colors: Colors) => StyleSheet.create({
     borderBottomColor: colors.nonThemeColors.black,
     borderBottomWidth: 1,
   },
-  error: {
-    color: colors.nonThemeColors.red,
-    fontSize: 12,
-  }
 })
