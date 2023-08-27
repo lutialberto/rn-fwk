@@ -1,0 +1,78 @@
+{
+	// Place your rn-fwk workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"ServiceGet": {
+		"scope": "typescript",
+		"prefix": "appServiceGet",
+		"body": [
+      "export const ${1:GetUsers} = async () => {",
+      "  const url = `${2:users}`;",
+      "  const queryParams = ${3:{\\}};",
+      "  return await getDataService$4<${5:User}Response>(axiosInstance, url, queryParams);",
+      "}",
+ 		],
+		"description": "Service Get"
+	},
+	"ServicePost": {
+		"scope": "typescript",
+		"prefix": "appServicePost",
+		"body": [
+      "export const ${1:PostUser} = async () => {",
+      "  const url = `${2:users}`;",
+      "  const body = ${3:{\\}};",
+      "  return await postDataService$4<${5:User}Response>(axiosInstance, url, body);",
+      "}",
+ 		],
+		"description": "Service Post"
+	},
+	"ServicePut": {
+		"scope": "typescript",
+		"prefix": "appServicePut",
+		"body": [
+      "export const ${1:PutUser} = async () => {",
+      "  const url = `${2:users}`;",
+      "  const body = ${3:{\\}};",
+      "  return await putDataService$4<${5:User}Response>(axiosInstance, url, body);",
+      "}",
+ 		],
+		"description": "Service Put"
+	},
+	"ServicePatch": {
+		"scope": "typescript",
+		"prefix": "appServicePatch",
+		"body": [
+      "export const ${1:PatchUser} = async () => {",
+      "  const url = `${2:users}`;",
+      "  const body = ${3:{\\}};",
+      "  return await patchDataService$4<${5:User}Response>(axiosInstance, url, body);",
+      "}",
+ 		],
+		"description": "Service Patch"
+	},
+	"ServiceDelete": {
+		"scope": "typescript",
+		"prefix": "appServiceDelete",
+		"body": [
+      "export const ${1:DeleteUser} = async () => {",
+      "  const url = `${2:users}`;",
+      "  const body = ${3:{\\}};",
+      "  return await deleteDataService$4<${5:User}Response>(axiosInstance, url, body);",
+      "}",
+ 		],
+		"description": "Service Delete"
+	},
+}
