@@ -97,4 +97,16 @@
 		],
 		"description": "InputBoolean component"
 	},
+	"InputDate": {
+		"scope": "typescriptreact",
+		"prefix": "appInputDate",
+		"body": [
+      "<InputDateApp$1",
+      " formControl={{ control: control, name: '${2:date}' }}",
+      " label={'GenericLabel'}",
+      " error={errors.$2?.message}",
+      "/>",
+		],
+		"description": "InputDate component"
+	},
 }
