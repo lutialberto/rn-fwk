@@ -18,6 +18,7 @@ import { useTextStyles } from '../hooks/useTextStyles'
  *  regex={new RegExp(/./g)}
  *  replaceWith='*'
  * />
+ * @dependencies TextHideableFwk, useTextStyles
  * @param hide - hide text
  * @param text - text to hide
  * @param regex - regex to hide

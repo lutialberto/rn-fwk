@@ -10,6 +10,7 @@ import ScreenContainerFwk from 'fwk/components/containers/screenContainer/Screen
  * <ScreenContainerApp style={styles.container}>
  *  <Text>GenericScreenContainer</Text>
  * </ScreenContainerApp>
+ * @dependencies ScreenContainerFwk, useTheme
  * @param children - screen container children
  * @param style - style of the screen container
  */

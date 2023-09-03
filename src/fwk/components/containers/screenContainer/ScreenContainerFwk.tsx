@@ -9,6 +9,7 @@ import { ScreenContainerFwkProps } from './ScreenContainerFwkProps';
  * <ScreenContainerFwk style={styles.container}>
  *  <Text>GenericScreenContainer</Text>
  * </ScreenContainerFwk>
+ * @dependencies 'react-native-safe-area-context'
  * @param children - screen container children
  * @param style - style of the screen container
  */

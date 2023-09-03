@@ -15,6 +15,7 @@ import { FieldValues } from 'react-hook-form'
  *  label='GenericLabel'
  *  error='GenericError'
  * />
+ * @dependencies InputTextFwk, InputWrapperApp, useTextStyles, react-hook-form
  * @param formControl - form control of the input text
  * @param textInput - text input props
  * @param label - input wrapper label

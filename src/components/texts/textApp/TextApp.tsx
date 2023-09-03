@@ -12,6 +12,7 @@ import { useTextStyles } from '../hooks/useTextStyles';
  * >
  *  GenericText
  * </TextApp>
+ * @dependencies useTextStyles
  */
 const TextApp = (props: TextProps) => {
   const { styles } = useTextStyles();

@@ -15,6 +15,7 @@ import { useTextStyles } from 'components/texts/hooks/useTextStyles'
  * >
  *  <Text>GenericInputWrapper</Text>
  * </InputWrapperApp>
+ * @dependencies InputWrapperFwk, TextApp, useTheme, useTextStyles
  * @param children - input wrapper children
  * @param error - input wrapper error
  * @param label - input wrapper label

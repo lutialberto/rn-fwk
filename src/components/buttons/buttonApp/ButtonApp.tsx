@@ -1,4 +1,4 @@
-import { Text, StyleSheet, StyleProp, ViewStyle, TextStyle } from 'react-native';
+import { StyleSheet, StyleProp, ViewStyle, TextStyle } from 'react-native';
 import React from 'react';
 import { ButtonAppProps } from './ButtonAppProps';
 import { ButtonFwk } from 'fwk/components';
@@ -22,6 +22,7 @@ import { Variant } from './models/Variant';
  *  containerStyle={styles.container}
  *  labelStyle={styles.label}
  * />
+ * @dependencies ButtonFwk, useButtonVariants, TextApp, useTheme, vw
  * @param variant - button variant
  * @param enabled - button enabled
  * @param onPress - function to execute when the button is pressed and enabled

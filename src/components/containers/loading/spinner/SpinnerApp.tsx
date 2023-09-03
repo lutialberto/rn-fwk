@@ -14,6 +14,7 @@ import { useTheme } from 'hooks/theme'
  * >
  *   <Text>Content</Text>
  * </SpinnerApp>
+ * @dependencies SpinnerFwk, useTheme
  * @param visible - spinner visible
  * @param variant - spinner variant
  */

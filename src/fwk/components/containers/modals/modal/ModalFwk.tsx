@@ -16,6 +16,7 @@ import { ModalFwkProps } from './ModalFwkProps';
  * >
  *  <Text>GenericModal</Text>
  * </ModalFwk>
+ * @dependencies 'react-native-svg', 'react-native-svg-transformer'
  * @param modalProps - modal props
  * @param children - modal children
  * @param childrenContainerStyle - style of the children container

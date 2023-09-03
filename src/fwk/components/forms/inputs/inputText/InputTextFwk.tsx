@@ -10,6 +10,7 @@ import { FieldValues, useController } from 'react-hook-form'
  *  formControl={{ control: control, name: 'genericName' }}
  *  textInput={{ placeholder: 'GenericPlaceholder' }}
  * />
+ * @dependencies react-hook-form
  * @param formControl - form control of the input text
  * @param textInput - text input props
  */

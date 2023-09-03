@@ -13,6 +13,7 @@ export interface ThemeState {
 
 /**
  * @description - This hook is used to get the theme
+ * @depencies zustand, expo-secure-store
  * @example - const { selectedTheme, themeOptions, colors, changeTheme } = useTheme();
  */
 export const useTheme = create<ThemeState>()(

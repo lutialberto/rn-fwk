@@ -17,6 +17,7 @@ import { useTextStyles } from 'components/texts/hooks/useTextStyles';
  *  label='GenericLabel'
  *  error='GenericError'
  * />
+ * @dependencies InputBooleanFwk, TextApp, useTheme, vw, useTextStyles, react-hook-form
  * @param formControl - form control of the input boolean
  * @param booleanInput - boolean input props
  * @param label - input wrapper label

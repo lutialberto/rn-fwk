@@ -18,6 +18,7 @@ import ModalFwk from 'fwk/components/containers/modals/modal/ModalFwk';
  * >
  *  <Text>GenericModal</Text>
  * </ModalApp>
+ * @dependencies ModalFwk, TextApp, useTheme
  * @param modalProps - modal props
  * @param children - modal children
  * @param childrenContainerStyle - style of the children container

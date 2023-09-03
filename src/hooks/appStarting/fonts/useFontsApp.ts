@@ -2,6 +2,7 @@ import { useFonts } from 'expo-font';
 
 /**
  * @description hook to load fonts
+ * @depencies expo-font
  * @returns {Object} fontsLoaded: boolean
  */
 export const useFontsApp = () => {

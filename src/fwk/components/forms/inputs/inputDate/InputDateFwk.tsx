@@ -15,6 +15,7 @@ import { DateTimePickerEvent, AndroidNativeProps } from '@react-native-community
  *    formatDate: (date?: Date) => date?.toLocaleDateString(),
  *  }}
  * />
+ * @dependencies react-hook-form, @react-native-community/datetimepicker
  * @param formControl - form control of the input date
  * @param dateInput - date input props
  */

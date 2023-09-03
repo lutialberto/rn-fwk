@@ -3,6 +3,7 @@ import NetInfo from '@react-native-community/netinfo';
 
 /**
  * @description Hook to get the network status
+ * @dependencies @react-native-community/netinfo
  */
 export const useNetInfo = () => {
   const [isConnected, setIsconnected] = useState(true);

@@ -13,6 +13,7 @@ import InputWrapperApp from '../inputWrapper/InputWrapperApp'
  *  label='Date'
  *  error={errors.date?.message}
  * />
+ * @dependencies InputDateFwk, InputWrapperApp, react-hook-form
  * @param formControl - form control of the input date
  * @param dateInput - date input props
  */

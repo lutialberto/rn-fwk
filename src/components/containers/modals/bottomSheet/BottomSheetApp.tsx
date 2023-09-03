@@ -19,6 +19,7 @@ import { Colors, useTheme } from 'hooks/theme';
  * >
  *  <Text>GenericModal</Text>
  * </ModalApp>
+ * @dependencies ModalFwk, TextApp, useTheme
  * @param modalProps - modal props
  * @param children - modal children
  * @param childrenContainerStyle - style of the children container

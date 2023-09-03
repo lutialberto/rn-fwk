@@ -7,6 +7,9 @@ import HomeScreen from 'screens/home/HomeScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
+/**
+ * @dependencies @react-navigation/native, @react-navigation/native-stack, react-native-screens
+ */
 const MainNavigator = () => {
   return (
     <NavigationContainer>
