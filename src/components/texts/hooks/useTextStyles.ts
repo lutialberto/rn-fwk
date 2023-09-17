@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native'
-import { Fonts } from 'hooks/appStarting/fonts/FontFamily';
-import { Colors, useTheme } from 'hooks/theme';
+import {StyleSheet} from 'react-native';
+import {Fonts} from 'hooks/appStarting/fonts/FontFamily';
+import {Colors, useTheme} from 'hooks/theme';
 
 /**
  * @description - This hook is used to get the styles for the text component
@@ -9,14 +9,14 @@ import { Colors, useTheme } from 'hooks/theme';
  * @depencies useTheme
  */
 export const useTextStyles = () => {
-  const { colors } = useTheme();
+  const {colors} = useTheme();
   const styles = getStyles(colors);
 
   return {
     styles,
     colors,
   };
-}
+};
 
 const getStyles = (colors: Colors) => {
   return StyleSheet.create({

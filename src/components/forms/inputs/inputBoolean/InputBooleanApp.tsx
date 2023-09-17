@@ -1,12 +1,12 @@
-import { StyleSheet, View } from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
-import { Colors, useTheme } from 'hooks/theme';
+import {Colors, useTheme} from 'hooks/theme';
 import InputBooleanFwk from 'fwk/components/forms/inputs/inputBoolean/InputBooleanFwk';
-import { vw } from 'fwk/constants/Dimentions';
-import { FieldValues } from 'react-hook-form';
-import { InputBooleanAppProps } from './InputBooleanAppProps';
+import {vw} from 'fwk/constants/Dimentions';
+import {FieldValues} from 'react-hook-form';
+import {InputBooleanAppProps} from './InputBooleanAppProps';
 import TextApp from 'components/texts/textApp/TextApp';
-import { useTextStyles } from 'components/texts/hooks/useTextStyles';
+import {useTextStyles} from 'components/texts/hooks/useTextStyles';
 
 /**
  * @description Application input boolean component
@@ -24,9 +24,9 @@ import { useTextStyles } from 'components/texts/hooks/useTextStyles';
  * @param error - input wrapper error
  */
 function InputBooleanApp<T extends FieldValues>(props: InputBooleanAppProps<T>) {
-  const { colors } = useTheme();
+  const {colors} = useTheme();
   const styles = getStyles(colors);
-  const { styles: textStyles } = useTextStyles();
+  const {styles: textStyles} = useTextStyles();
 
   return (
     <View>
@@ -48,7 +48,7 @@ function InputBooleanApp<T extends FieldValues>(props: InputBooleanAppProps<T>) 
       {props.error && <TextApp style={textStyles.inputError}>{props.error}</TextApp>}
     </View>
   );
-};
+}
 
 export default InputBooleanApp;
 

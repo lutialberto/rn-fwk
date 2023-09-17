@@ -1,10 +1,10 @@
-import { StyleSheet } from 'react-native'
-import React from 'react'
-import InputTextFwk from 'fwk/components/forms/inputs/inputText/InputTextFwk'
-import { useTextStyles } from 'components/texts/hooks/useTextStyles'
-import InputWrapperApp from '../inputWrapper/InputWrapperApp'
-import { InputTextAppProps } from './InputTextAppProps'
-import { FieldValues } from 'react-hook-form'
+import {StyleSheet} from 'react-native';
+import React from 'react';
+import InputTextFwk from 'fwk/components/forms/inputs/inputText/InputTextFwk';
+import {useTextStyles} from 'components/texts/hooks/useTextStyles';
+import InputWrapperApp from '../inputWrapper/InputWrapperApp';
+import {InputTextAppProps} from './InputTextAppProps';
+import {FieldValues} from 'react-hook-form';
 
 /**
  * @description Application input text component
@@ -22,21 +22,21 @@ import { FieldValues } from 'react-hook-form'
  * @param error - input wrapper error
  */
 function InputTextApp<T extends FieldValues>(props: InputTextAppProps<T>) {
-  const { styles } = useTextStyles()
+  const {styles} = useTextStyles();
   return (
-    <InputWrapperApp
-      label={props.label}
-      error={props.error}
-    >
+    <InputWrapperApp label={props.label} error={props.error}>
       <InputTextFwk
         {...props}
-        textInput={{ ...props.textInput, style: [styles.textDefault, styles2.input, props.textInput?.style] }}
+        textInput={{
+          ...props.textInput,
+          style: [styles.textDefault, styles2.input, props.textInput?.style],
+        }}
       />
     </InputWrapperApp>
-  )
+  );
 }
 
-export default InputTextApp
+export default InputTextApp;
 
 const styles2 = StyleSheet.create({
   input: {
@@ -45,4 +45,4 @@ const styles2 = StyleSheet.create({
     padding: 10,
     borderRadius: 4,
   },
-})
+});

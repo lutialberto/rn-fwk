@@ -1,6 +1,6 @@
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
-import { ButtonFwkProps } from './ButtonFwkProps';
+import {ButtonFwkProps} from './ButtonFwkProps';
 
 /**
  * @description Framework button component
@@ -32,7 +32,7 @@ const ButtonFwk = ({
 }: ButtonFwkProps) => {
   return (
     <TouchableOpacity
-      onPress={enabled ? onPress : () => { }}
+      onPress={enabled ? onPress : () => {}}
       style={containerStyle}
       disabled={!enabled}>
       <>

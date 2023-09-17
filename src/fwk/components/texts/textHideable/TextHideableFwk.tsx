@@ -1,6 +1,6 @@
-import { Text } from 'react-native'
-import React from 'react'
-import { TextHideableFwkProps } from './TextHideableFwkProps'
+import {Text} from 'react-native';
+import React from 'react';
+import {TextHideableFwkProps} from './TextHideableFwkProps';
 
 /**
  * @description Framework text hideable component
@@ -18,10 +18,8 @@ import { TextHideableFwkProps } from './TextHideableFwkProps'
  * @param text - text to hide
  * @param style - style of the text
  */
-const TextHideableFwk = ({ hide, regex, replaceWith, text, style }: TextHideableFwkProps) => {
-  return (
-    <Text style={style}>{hide ? text.replace(regex, replaceWith) : text}</Text>
-  )
-}
+const TextHideableFwk = ({hide, regex, replaceWith, text, style}: TextHideableFwkProps) => {
+  return <Text style={style}>{hide ? text.replace(regex, replaceWith) : text}</Text>;
+};
 
-export default TextHideableFwk
+export default TextHideableFwk;

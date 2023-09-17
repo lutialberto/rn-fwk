@@ -1,7 +1,7 @@
-import { TouchableOpacity } from 'react-native';
+import {TouchableOpacity} from 'react-native';
 import React from 'react';
-import { InputBooleanFwkProps } from './InputBooleanFwkProps';
-import { FieldValues, useController } from 'react-hook-form';
+import {InputBooleanFwkProps} from './InputBooleanFwkProps';
+import {FieldValues, useController} from 'react-hook-form';
 
 /**
  * @description Framework boolean input component
@@ -17,10 +17,10 @@ function FwkBooleanInput<T extends FieldValues>({
   formControl,
   booleanInput = {
     enabled: true,
-  }
+  },
 }: InputBooleanFwkProps<T>) {
-  const { borderStyle, children, enabled = true } = booleanInput;
-  const { field } = useController(formControl);
+  const {borderStyle, children, enabled = true} = booleanInput;
+  const {field} = useController(formControl);
 
   const handleChange = () => {
     if (enabled) {
@@ -29,13 +29,10 @@ function FwkBooleanInput<T extends FieldValues>({
   };
 
   return (
-    <TouchableOpacity
-      style={borderStyle}
-      onPress={handleChange}
-    >
+    <TouchableOpacity style={borderStyle} onPress={handleChange}>
       {field.value && children}
     </TouchableOpacity>
   );
-};
+}
 
 export default FwkBooleanInput;

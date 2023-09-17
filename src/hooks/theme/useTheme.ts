@@ -1,6 +1,6 @@
 import {create} from 'zustand';
 import {createJSONStorage, persist} from 'zustand/middleware';
-import { getItemAsync,deleteItemAsync,setItemAsync} from 'expo-secure-store';
+import {getItemAsync, deleteItemAsync, setItemAsync} from 'expo-secure-store';
 import {Colors, ThemeNameOptions} from './Models';
 import {NONE_THEME_PROPS, THEMES_PROPS, THEME_NAME_OPTIONS} from './Constants';
 
@@ -25,15 +25,14 @@ export const useTheme = create<ThemeState>()(
         nonThemeColors: NONE_THEME_PROPS,
         themeColors: THEMES_PROPS[THEME_NAME_OPTIONS[0]],
       },
-      changeTheme: (newTheme: ThemeNameOptions) => set(
-        () => ({
+      changeTheme: (newTheme: ThemeNameOptions) =>
+        set(() => ({
           selectedTheme: newTheme,
           colors: {
             nonThemeColors: NONE_THEME_PROPS,
             themeColors: THEMES_PROPS[newTheme],
           },
-        })
-      ),
+        })),
     }),
     {
       name: 'theme-storage',
@@ -45,4 +44,4 @@ export const useTheme = create<ThemeState>()(
       version: 1,
     },
   ),
-)
+);

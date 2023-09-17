@@ -1,7 +1,7 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import React from 'react';
-import { ModalFwkProps } from 'fwk/components/containers/modals/modal/ModalFwkProps';
-import { Colors, useTheme } from 'hooks/theme';
+import {ModalFwkProps} from 'fwk/components/containers/modals/modal/ModalFwkProps';
+import {Colors, useTheme} from 'hooks/theme';
 import ModalFwk from 'fwk/components/containers/modals/modal/ModalFwk';
 
 /**
@@ -24,12 +24,8 @@ import ModalFwk from 'fwk/components/containers/modals/modal/ModalFwk';
  * @param childrenContainerStyle - style of the children container
  * @param visibleContainerStyle - style of the visible container
  */
-const ModalApp = ({
-  visibleContainerStyle,
-  childrenContainerStyle,
-  ...props
-}: ModalFwkProps) => {
-  const { colors } = useTheme();
+const ModalApp = ({visibleContainerStyle, childrenContainerStyle, ...props}: ModalFwkProps) => {
+  const {colors} = useTheme();
   const styles = getStyles(colors);
 
   return (

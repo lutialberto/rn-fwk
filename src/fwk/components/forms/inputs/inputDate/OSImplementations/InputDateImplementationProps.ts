@@ -1,4 +1,4 @@
-import { AndroidNativeProps, IOSNativeProps } from '@react-native-community/datetimepicker';
+import {AndroidNativeProps, IOSNativeProps} from '@react-native-community/datetimepicker';
 
 export interface InputDateImplementationProps {
   visible: boolean;

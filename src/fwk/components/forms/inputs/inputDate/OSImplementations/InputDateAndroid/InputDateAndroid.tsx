@@ -1,18 +1,18 @@
-import { StyleSheet } from 'react-native'
-import React, { useEffect } from 'react'
-import { InputDateImplementationProps } from '../InputDateImplementationProps'
-import { DateTimePickerAndroid, AndroidNativeProps } from '@react-native-community/datetimepicker'
+import {StyleSheet} from 'react-native';
+import React, {useEffect} from 'react';
+import {InputDateImplementationProps} from '../InputDateImplementationProps';
+import {DateTimePickerAndroid, AndroidNativeProps} from '@react-native-community/datetimepicker';
 
 const InputDateAndroid = (props: InputDateImplementationProps) => {
   useEffect(() => {
     if (props.visible) {
-      DateTimePickerAndroid.open(props.dateTimePickeckProps as AndroidNativeProps)
+      DateTimePickerAndroid.open(props.dateTimePickeckProps as AndroidNativeProps);
     }
-  }, [props.visible])
+  }, [props.visible]);
 
-  return <></>
-}
+  return <></>;
+};
 
-export default InputDateAndroid
+export default InputDateAndroid;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

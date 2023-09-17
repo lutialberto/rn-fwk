@@ -1,8 +1,8 @@
-import { StyleSheet } from 'react-native'
-import React from 'react'
-import TextHideableFwk from 'fwk/components/texts/textHideable/TextHideableFwk'
-import { TextHideableAppProps } from './TextHideableAppProps'
-import { useTextStyles } from '../hooks/useTextStyles'
+import {StyleSheet} from 'react-native';
+import React from 'react';
+import TextHideableFwk from 'fwk/components/texts/textHideable/TextHideableFwk';
+import {TextHideableAppProps} from './TextHideableAppProps';
+import {useTextStyles} from '../hooks/useTextStyles';
 
 /**
  * @description Application text hideable component
@@ -28,9 +28,9 @@ const TextHideableApp = ({
   hide,
   replaceWith = '*',
   text,
-  regex = new RegExp(/./g)
+  regex = new RegExp(/./g),
 }: TextHideableAppProps) => {
-  const { styles } = useTextStyles();
+  const {styles} = useTextStyles();
 
   return (
     <TextHideableFwk
@@ -40,9 +40,9 @@ const TextHideableApp = ({
       text={text}
       style={styles.textDefault}
     />
-  )
-}
+  );
+};
 
-export default TextHideableApp
+export default TextHideableApp;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
