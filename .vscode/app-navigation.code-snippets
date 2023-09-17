@@ -1,0 +1,85 @@
+{
+  // Place your rn-fwk workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "Screen Component": {
+    "scope": "typescriptreact",
+    "prefix": "appScreenComponent",
+    "body": [
+      "import { StyleSheet } from 'react-native';",
+      "import React from 'react';",
+      "import ScreenContainerApp from 'components/containers/screenContainer/ScreenContainerApp';",
+      "import TextApp from 'components/texts/textApp/TextApp';",
+      "",
+      "const ${1:Home}Screen = () => {",
+      "  return (",
+      "    <ScreenContainerApp>",
+      "      <TextApp>${1:Home}Screen</TextApp>",
+      "    </ScreenContainerApp>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:Home}Screen;",
+      "",
+      "const styles = StyleSheet.create({",
+      "});",
+      "",
+    ],
+    "description": "Create App Screen Component"
+  },
+  "ScreenContainer": {
+    "scope": "typescriptreact",
+    "prefix": "appScreenContainer",
+    "body": [
+      "<ScreenContainerApp$1>",
+      "  <Text>ScreenBody</Text>",
+      "</ScreenContainerApp>"
+    ],
+    "description": "ScreenContainer component"
+  },
+  "Tab Component": {
+    "scope": "typescriptreact",
+    "prefix": "appTabComponent",
+    "body": [
+      "import { StyleSheet, Text, View } from 'react-native'",
+      "import React from 'react'",
+      "import TabScreenContainerApp from 'components/containers/tabs/tabScreenContainer/TabScreenContainerApp'",
+      "",
+      "const ${1:News}Tab = () => {",
+      "  return (",
+      "    <TabScreenContainerApp>",
+      "      <Text>${1:News}Tab</Text>",
+      "    </TabScreenContainerApp>",
+      "  )",
+      "}",
+      "",
+      "export default ${1:News}Tab",
+      "",
+      "const styles = StyleSheet.create({})",
+    ],
+    "description": "Create App Screen Component"
+  },
+  "TabScreenContainer": {
+    "scope": "typescriptreact",
+    "prefix": "appTabScreenContainer",
+    "body": [
+      "<TabScreenContainerApp$1>",
+      "  <Text>ScreenBody</Text>",
+      "</TabScreenContainerApp>"
+    ],
+    "description": "TabScreenContainer component"
+  },
+}

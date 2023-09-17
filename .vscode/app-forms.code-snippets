@@ -15,6 +15,42 @@
   // 	],
   // 	"description": "Log output to console"
   // }
+  "InputText": {
+    "scope": "typescriptreact",
+    "prefix": "appInputText",
+    "body": [
+      "<InputTextApp$1",
+      " formControl={{ control: control, name: '${2:name}' }}",
+      " label={'GenericLabel'}",
+      " error={errors.$2?.message}",
+      "/>"
+    ],
+    "description": "InputText component"
+  },
+  "InputBoolean": {
+    "scope": "typescriptreact",
+    "prefix": "appInputBoolean",
+    "body": [
+      "<InputBooleanApp$1",
+      " formControl={{ control: control, name: '${2:accept}' }}",
+      " label={'GenericLabel'}",
+      " error={errors.$2?.message}",
+      "/>"
+    ],
+    "description": "InputBoolean component"
+  },
+  "InputDate": {
+    "scope": "typescriptreact",
+    "prefix": "appInputDate",
+    "body": [
+      "<InputDateApp$1",
+      " formControl={{ control: control, name: '${2:date}' }}",
+      " label={'GenericLabel'}",
+      " error={errors.$2?.message}",
+      "/>"
+    ],
+    "description": "InputDate component"
+  },
   "Form": {
     "scope": "typescriptreact",
     "prefix": "appForm",

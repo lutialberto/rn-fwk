@@ -47,16 +47,6 @@
     ],
     "description": "BottomSheet component"
   },
-  "ScreenContainer": {
-    "scope": "typescriptreact",
-    "prefix": "appScreenContainer",
-    "body": [
-      "<ScreenContainerApp$1>",
-      "  <Text>ScreenBody</Text>",
-      "</ScreenContainerApp>"
-    ],
-    "description": "ScreenContainer component"
-  },
   "Spinner": {
     "scope": "typescriptreact",
     "prefix": "appSpinner",
@@ -69,40 +59,4 @@
     ],
     "description": "Spinner component"
   },
-  "InputText": {
-    "scope": "typescriptreact",
-    "prefix": "appInputText",
-    "body": [
-      "<InputTextApp$1",
-      " formControl={{ control: control, name: '${2:name}' }}",
-      " label={'GenericLabel'}",
-      " error={errors.$2?.message}",
-      "/>"
-    ],
-    "description": "InputText component"
-  },
-  "InputBoolean": {
-    "scope": "typescriptreact",
-    "prefix": "appInputBoolean",
-    "body": [
-      "<InputBooleanApp$1",
-      " formControl={{ control: control, name: '${2:accept}' }}",
-      " label={'GenericLabel'}",
-      " error={errors.$2?.message}",
-      "/>"
-    ],
-    "description": "InputBoolean component"
-  },
-  "InputDate": {
-    "scope": "typescriptreact",
-    "prefix": "appInputDate",
-    "body": [
-      "<InputDateApp$1",
-      " formControl={{ control: control, name: '${2:date}' }}",
-      " label={'GenericLabel'}",
-      " error={errors.$2?.message}",
-      "/>"
-    ],
-    "description": "InputDate component"
-  }
 }
