@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { InputWrapperFwkProps } from './InputWrapperFwkProps'
+import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import {InputWrapperFwkProps} from './InputWrapperFwkProps';
 
 /**
  * @description Framework input wrapper component
@@ -17,19 +17,16 @@ import { InputWrapperFwkProps } from './InputWrapperFwkProps'
  * @param label - label of the input wrapper
  * @param error - error of the input wrapper
  */
-const InputWrapperFwk = ({ children, childrenStyle, label, error }: InputWrapperFwkProps) => {
+const InputWrapperFwk = ({children, childrenStyle, label, error}: InputWrapperFwkProps) => {
   return (
     <View>
       {label?.component ?? <Text style={label?.style}>{label?.value}</Text>}
-      <View style={childrenStyle}>
-        {children}
-      </View>
+      <View style={childrenStyle}>{children}</View>
       {error.value !== '' && (error.component ?? <Text style={error?.style}>{error.value}</Text>)}
     </View>
-  )
-}
+  );
+};
 
-export default InputWrapperFwk
+export default InputWrapperFwk;
 
-const styles = StyleSheet.create({
-})
+const styles = StyleSheet.create({});

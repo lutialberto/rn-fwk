@@ -1,12 +1,12 @@
-import { StyleSheet, StyleProp, ViewStyle, TextStyle } from 'react-native';
+import {StyleSheet, StyleProp, ViewStyle, TextStyle} from 'react-native';
 import React from 'react';
-import { ButtonAppProps } from './ButtonAppProps';
-import { ButtonFwk } from 'fwk/components';
-import { useButtonVariants } from '../../../fwk/components/button/hooks/useButtonVariants';
+import {ButtonAppProps} from './ButtonAppProps';
+import {ButtonFwk} from 'fwk/components';
+import {useButtonVariants} from '../../../fwk/components/button/hooks/useButtonVariants';
 import TextApp from 'components/texts/textApp/TextApp';
-import { Colors, useTheme } from 'hooks/theme';
-import { vw } from 'fwk/constants/Dimentions';
-import { Variant } from './models/Variant';
+import {Colors, useTheme} from 'hooks/theme';
+import {vw} from 'fwk/constants/Dimentions';
+import {Variant} from './models/Variant';
 
 /**
  * @description Application button component
@@ -40,10 +40,10 @@ const ButtonApp = ({
   labelComponent,
   ...props
 }: ButtonAppProps) => {
-  const { colors } = useTheme();
+  const {colors} = useTheme();
   const styles = getStyles(colors);
 
-  const { getContainerStyle, getLabelStyle } = useButtonVariants<Variant>({
+  const {getContainerStyle, getLabelStyle} = useButtonVariants<Variant>({
     baseStyles: {
       container: styles.baseContainer as StyleProp<ViewStyle>,
       label: styles.baseLabel as StyleProp<TextStyle>,
@@ -87,7 +87,9 @@ const ButtonApp = ({
       enabled={enabled}
       containerStyle={containerStyleFinal}
       labelStyle={labelStyleFinal}
-      labelComponent={labelComponent ?? <TextApp style={labelStyleFinal}>{props.label ?? ''}</TextApp>}
+      labelComponent={
+        labelComponent ?? <TextApp style={labelStyleFinal}>{props.label ?? ''}</TextApp>
+      }
     />
   );
 };

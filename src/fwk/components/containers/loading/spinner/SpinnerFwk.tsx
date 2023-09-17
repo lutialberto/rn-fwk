@@ -1,6 +1,6 @@
-import { ActivityIndicator, StyleSheet, View } from 'react-native';
+import {ActivityIndicator, StyleSheet, View} from 'react-native';
 import React from 'react';
-import { SpinnerFwkProps } from './SpinnerFwkProps';
+import {SpinnerFwkProps} from './SpinnerFwkProps';
 
 /**
  * @description Framework spinner component
@@ -18,21 +18,9 @@ import { SpinnerFwkProps } from './SpinnerFwkProps';
  * @param variant - spinner variant
  * @param style - style of the spinner container
  */
-const SpinnerFwk = ({
-  visible,
-  color,
-  style,
-  children,
-  variant = 'default',
-}: SpinnerFwkProps) => {
+const SpinnerFwk = ({visible, color, style, children, variant = 'default'}: SpinnerFwkProps) => {
   return (
-    <View
-      style={[
-        styles.container,
-        variant === 'overlap' && styles.overlay,
-        style
-      ]}
-    >
+    <View style={[styles.container, variant === 'overlap' && styles.overlay, style]}>
       {(variant === 'overlap' || !visible) && children}
       <ActivityIndicator animating={visible} color={color ?? 'blue'} size="large" />
     </View>
@@ -55,4 +43,3 @@ const styles = StyleSheet.create({
     right: 0,
   },
 });
-

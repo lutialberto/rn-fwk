@@ -1,9 +1,9 @@
 import {create} from 'zustand';
 import {createJSONStorage, persist} from 'zustand/middleware';
-import { getItemAsync,deleteItemAsync,setItemAsync} from 'expo-secure-store';
+import {getItemAsync, deleteItemAsync, setItemAsync} from 'expo-secure-store';
 
 type BaseSessionData<T> = {
-  customData: { content: T };
+  customData: {content: T};
   baseData: {
     isSignedIn?: boolean;
   };
@@ -11,32 +11,32 @@ type BaseSessionData<T> = {
   logout: () => void;
 };
 
-const INITIAL_CUSTOM_DATA: BaseSessionData<{}>["customData"] = {
+const INITIAL_CUSTOM_DATA: BaseSessionData<{}>['customData'] = {
   content: {},
 };
 
 const useDataImpl = create<BaseSessionData<unknown>>()(
   persist(
-  (set) => ({
-    customData: INITIAL_CUSTOM_DATA,
-    baseData: {
-    isSignedIn: undefined,
-    },
-    login: (customData: unknown) => 
-      set(() => ({
-        customData: { content: customData },
-        baseData: {
-          isSignedIn: true
-        }
-      })),
-    logout: () => 
-      set(() => ({
-        customData: INITIAL_CUSTOM_DATA,
-        baseData: {
-          isSignedIn: false
-        }
-      })),
-  }),
+    set => ({
+      customData: INITIAL_CUSTOM_DATA,
+      baseData: {
+        isSignedIn: undefined,
+      },
+      login: (customData: unknown) =>
+        set(() => ({
+          customData: {content: customData},
+          baseData: {
+            isSignedIn: true,
+          },
+        })),
+      logout: () =>
+        set(() => ({
+          customData: INITIAL_CUSTOM_DATA,
+          baseData: {
+            isSignedIn: false,
+          },
+        })),
+    }),
     {
       name: `session-status-storage`,
       storage: createJSONStorage(() => ({
@@ -46,7 +46,7 @@ const useDataImpl = create<BaseSessionData<unknown>>()(
       })),
       version: 1,
     },
-  )
+  ),
 );
 
 export const useSessionStatus = useDataImpl as {

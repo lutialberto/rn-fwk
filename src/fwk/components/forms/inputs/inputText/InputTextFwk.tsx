@@ -1,7 +1,7 @@
-import { StyleSheet, TextInput, View } from 'react-native'
-import React from 'react'
-import { InputTextFwkProps } from './InputTextFwkProps'
-import { FieldValues, useController } from 'react-hook-form'
+import {StyleSheet, TextInput, View} from 'react-native';
+import React from 'react';
+import {InputTextFwkProps} from './InputTextFwkProps';
+import {FieldValues, useController} from 'react-hook-form';
 
 /**
  * @description Framework input text component
@@ -15,7 +15,7 @@ import { FieldValues, useController } from 'react-hook-form'
  * @param textInput - text input props
  */
 function InputTextFwk<T extends FieldValues>(props: InputTextFwkProps<T>) {
-  const { field } = useController({ ...props.formControl });
+  const {field} = useController({...props.formControl});
   return (
     <View>
       <TextInput
@@ -26,10 +26,9 @@ function InputTextFwk<T extends FieldValues>(props: InputTextFwkProps<T>) {
         ref={field.ref}
       />
     </View>
-  )
+  );
 }
 
-export default InputTextFwk
+export default InputTextFwk;
 
-const styles = StyleSheet.create({
-})
+const styles = StyleSheet.create({});

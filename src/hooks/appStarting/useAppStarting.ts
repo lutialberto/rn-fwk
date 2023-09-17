@@ -1,4 +1,4 @@
-import { useFontsApp } from './fonts/useFontsApp';
+import {useFontsApp} from './fonts/useFontsApp';
 
 /**
  * @description hook to check if app is ready
@@ -8,5 +8,5 @@ export const useAppStarting = () => {
 
   return {
     appReady: fontsLoaded,
-  }
-}
+  };
+};

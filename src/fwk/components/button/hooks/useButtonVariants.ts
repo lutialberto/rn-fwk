@@ -1,4 +1,4 @@
-import { StyleProp, TextProps, ViewProps } from 'react-native';
+import {StyleProp, TextProps, ViewProps} from 'react-native';
 
 /**
  * @description This is a helper hook to get the styles of the button variants
@@ -7,7 +7,7 @@ import { StyleProp, TextProps, ViewProps } from 'react-native';
  * @param props.labelStyles The label styles of the button
  * @returns The styles of the button variants
  */
-export function useButtonVariants<T extends string> (props:{
+export function useButtonVariants<T extends string>(props: {
   baseStyles: {
     container: StyleProp<ViewProps>;
     label: StyleProp<TextProps>;
@@ -16,16 +16,20 @@ export function useButtonVariants<T extends string> (props:{
     [key in T]: {
       container: StyleProp<ViewProps>;
       containerDisabled: StyleProp<ViewProps>;
-    }
-  }
+    };
+  };
   labelStyles: {
     [key in T]: {
       label: StyleProp<TextProps>;
       labelDisabled: StyleProp<TextProps>;
-    }
+    };
   };
 }) {
-  const getContainerStyle = (enabled: boolean, variant: T, containerStyle: StyleProp<ViewProps>) => {
+  const getContainerStyle = (
+    enabled: boolean,
+    variant: T,
+    containerStyle: StyleProp<ViewProps>,
+  ) => {
     return [
       props.baseStyles.container,
       props.containerStyles[variant]?.container,
@@ -36,9 +40,9 @@ export function useButtonVariants<T extends string> (props:{
 
   const getLabelStyle = (enabled: boolean, variant: T, labelStyle: StyleProp<TextProps>) => {
     return [
-      props.baseStyles.label, 
+      props.baseStyles.label,
       props.labelStyles[variant]?.label,
-      labelStyle, 
+      labelStyle,
       !enabled && props.labelStyles[variant]?.labelDisabled,
     ];
   };

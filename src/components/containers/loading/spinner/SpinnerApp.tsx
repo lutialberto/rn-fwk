@@ -1,7 +1,7 @@
-import React from 'react'
-import SpinnerFwk from 'fwk/components/containers/loading/spinner/SpinnerFwk'
-import { SpinnerFwkProps } from 'fwk/components/containers/loading/spinner/SpinnerFwkProps'
-import { useTheme } from 'hooks/theme'
+import React from 'react';
+import SpinnerFwk from 'fwk/components/containers/loading/spinner/SpinnerFwk';
+import {SpinnerFwkProps} from 'fwk/components/containers/loading/spinner/SpinnerFwkProps';
+import {useTheme} from 'hooks/theme';
 
 /**
  * @description Application spinner component
@@ -19,14 +19,9 @@ import { useTheme } from 'hooks/theme'
  * @param variant - spinner variant
  */
 const SpinnerApp = (props: SpinnerFwkProps) => {
-  const { colors } = useTheme();
+  const {colors} = useTheme();
 
-  return (
-    <SpinnerFwk
-      {...props}
-      color={colors.themeColors.primary}
-    />
-  )
-}
+  return <SpinnerFwk {...props} color={colors.themeColors.primary} />;
+};
 
-export default SpinnerApp
+export default SpinnerApp;

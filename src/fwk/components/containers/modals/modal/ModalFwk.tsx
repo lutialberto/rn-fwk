@@ -1,7 +1,7 @@
-import { Modal, Pressable, StyleSheet, TouchableOpacity, View, Text } from 'react-native';
+import {Modal, Pressable, StyleSheet, TouchableOpacity, View, Text} from 'react-native';
 import React from 'react';
 import CloseIcon from './CloseIcon.svg';
-import { ModalFwkProps } from './ModalFwkProps';
+import {ModalFwkProps} from './ModalFwkProps';
 
 /**
  * @description Framework modal component
@@ -35,22 +35,19 @@ const ModalFwk = ({
   variant = 'modal',
 }: ModalFwkProps) => {
   return (
-    <Modal
-      {...modalProps}
-      transparent
-      onRequestClose={modalProps.onDismiss}
-    >
-      <View style={[
-        styles.mainContainer,
-        { justifyContent: variant == 'modal' ? 'center' : 'flex-end' }
-      ]}>
+    <Modal {...modalProps} transparent onRequestClose={modalProps.onDismiss}>
+      <View
+        style={[
+          styles.mainContainer,
+          {justifyContent: variant == 'modal' ? 'center' : 'flex-end'},
+        ]}>
         <Pressable
-          style={[styles.transparentArea, { backgroundColor: transparentAreaBackgroundColor }]}
+          style={[styles.transparentArea, {backgroundColor: transparentAreaBackgroundColor}]}
           onPress={modalProps.onDismiss}
         />
         <View style={visibleContainerStyle}>
           <TouchableOpacity style={styles.closeIconContainer} onPress={modalProps.onDismiss}>
-            <CloseIcon style={{ color: closeIconColor, }} />
+            <CloseIcon style={{color: closeIconColor}} />
           </TouchableOpacity>
           <View style={childrenContainerStyle}>
             {children ? children : <Text>GenericModal</Text>}

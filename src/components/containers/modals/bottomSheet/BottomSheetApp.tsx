@@ -1,9 +1,9 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import React from 'react';
-import { ModalFwkProps } from 'fwk/components/containers/modals/modal/ModalFwkProps';
+import {ModalFwkProps} from 'fwk/components/containers/modals/modal/ModalFwkProps';
 import ModalFwk from 'fwk/components/containers/modals/modal/ModalFwk';
 import TextApp from 'components/texts/textApp/TextApp';
-import { Colors, useTheme } from 'hooks/theme';
+import {Colors, useTheme} from 'hooks/theme';
 
 /**
  * @description Application modal component
@@ -31,7 +31,7 @@ const BottomSheetApp = ({
   childrenContainerStyle,
   visibleContainerStyle,
 }: ModalFwkProps) => {
-  const { colors } = useTheme();
+  const {colors} = useTheme();
   const styles = getStyles(colors);
   return (
     <ModalFwk
@@ -40,15 +40,13 @@ const BottomSheetApp = ({
       childrenContainerStyle={childrenContainerStyle}
       closeIconColor={colors.themeColors.fontColor}
       transparentAreaBackgroundColor={colors.themeColors.lowOpacityColor}
-      variant='bottomSheet'
-    >
+      variant="bottomSheet">
       {children ?? <TextApp> GenericModal</TextApp>}
     </ModalFwk>
   );
 };
 
 export default BottomSheetApp;
-
 
 const getStyles = (colors: Colors) => {
   return StyleSheet.create({
