@@ -34,6 +34,12 @@
     "body": ["const {colors} = useTheme$1();", "const styles = getStyles();"],
     "description": "Use theme hook"
   },
+  "Toast hook": {
+    "scope": "typescriptreact",
+    "prefix": "hookToast",
+    "body": ["const {showToast} = useToastApp$1();"],
+    "description": "Use toast app hook"
+  },
   "GetStyles": {
     "scope": "typescript,typescriptreact",
     "prefix": "getStyles",
