@@ -51,6 +51,25 @@
     ],
     "description": "InputDate component"
   },
+  "InputSelect": {
+    "scope": "typescriptreact",
+    "prefix": "appInputSelect",
+    "body": [
+      "<InputSelectApp$1",
+      "  formControl={{ control: control, name: '${2:country}' }}",
+      "  label={'Select Label'}",
+      "  error={errors.$2?.message}",
+      "  selectInput={{",
+      "    options: [",
+      "      { label: 'Argentina', value: 'Argentina' },",
+      "      { label: 'Brasil', value: 'Brasil' },",
+      "      //...",
+      "    ],",
+      "  }}",
+      "/>",
+    ],
+    "description": "InputSelect component"
+  },
   "Form": {
     "scope": "typescriptreact",
     "prefix": "appForm",
