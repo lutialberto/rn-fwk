@@ -24,7 +24,7 @@ export const THEME_LIGHT: ThemeProps = {
   primary: blue,
   fontColor: black,
   backgroundColor: white,
-  cardColor: '#D8D8D8',
+  cardColor: '#f2f1f0',
   disabledColor: gray,
   lowOpacityColor: black,
 };
