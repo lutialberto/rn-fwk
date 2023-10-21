@@ -1,12 +1,36 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import React from 'react';
-import ScreenContainerApp from 'components/containers/screenContainer/ScreenContainerApp';
+import BottomTabContainerApp from 'components/containers/tabs/bottomTabContainer/BottomTabContainerApp';
+import {BottomTabItemFwkProps} from 'fwk/components/containers/tabs/bottomTabContainer/bottomTabItem/BottomTabItemFwkProps';
+import DefaultTab from './tabs/defaultTab/DefaultTab';
+import SearchIcon from 'assets/svg/SearchIcon.svg';
+import UserPreferencesTab from './tabs/userPreferencesTab/UserPreferencesTab';
+import MoreTab from './tabs/moreTab/MoreTab';
 
 const HomeScreen = () => {
+  const tabItems: BottomTabItemFwkProps[] = [
+    {
+      name: 'UserPreferences',
+      label: 'Preferencias',
+      children: <UserPreferencesTab />,
+      icon: color => <SearchIcon color={color} />,
+    },
+    {
+      name: 'Default',
+      label: 'Inicio',
+      children: <DefaultTab />,
+      icon: color => <SearchIcon color={color} />,
+    },
+    {
+      name: 'More',
+      label: 'Mas',
+      children: <MoreTab />,
+      icon: color => <SearchIcon color={color} />,
+    },
+  ];
+
   return (
-    <ScreenContainerApp style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </ScreenContainerApp>
+    <BottomTabContainerApp tabItems={tabItems} navigatorProps={{initialRouteName: 'Inicio'}} />
   );
 };
 
