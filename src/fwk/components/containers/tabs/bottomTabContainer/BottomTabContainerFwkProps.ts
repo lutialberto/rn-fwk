@@ -7,6 +7,8 @@ export interface BottonTabContainerFwkProps {
     tabBarItemStyle?: StyleProp<ViewStyle>;
     barStyle?: StyleProp<ViewStyle>;
     activeColor?: string;
+    inactiveColor?: string;
     shitfting?: boolean;
+    initialRouteName?: string;
   };
 }

@@ -21,11 +21,17 @@ const Tab = createMaterialTopTabNavigator();
  * @param label - label of the top tab item
  * @param tabScreenOptions - top tab item options
  */
-const BottomTabItemFwk = ({children, name, icon, theme = 'light'}: BottomTabItemFwkProps) => {
+const BottomTabItemFwk = ({
+  children,
+  name,
+  label,
+  icon,
+  theme = 'light',
+}: BottomTabItemFwkProps) => {
   return (
     <Tab.Screen
       key={name}
-      name={name}
+      name={label}
       children={() => children}
       options={{
         tabBarIcon: ({color}) => (

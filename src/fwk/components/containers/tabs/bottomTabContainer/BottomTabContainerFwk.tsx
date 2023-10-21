@@ -26,7 +26,9 @@ const BottomTabContainerFwk = ({tabItems, navigatorProps}: BottonTabContainerFwk
     <Tab.Navigator
       activeColor={navigatorProps?.activeColor}
       barStyle={navigatorProps?.barStyle}
-      shifting={navigatorProps?.shitfting}>
+      shifting={navigatorProps?.shitfting}
+      inactiveColor={navigatorProps?.inactiveColor}
+      initialRouteName={navigatorProps?.initialRouteName}>
       {tabItems.map(tab => BottomTabItemFwk(tab))}
     </Tab.Navigator>
   );

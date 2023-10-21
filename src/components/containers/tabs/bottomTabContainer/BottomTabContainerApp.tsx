@@ -24,7 +24,7 @@ import BottomTabContainerFwk from 'fwk/components/containers/tabs/bottomTabConta
  * @dependencies BottomTabContainerFwk, useTheme
  * @param tabItems - bottom tab items
  */
-const BottomTabContainerApp = ({tabItems}: BottonTabContainerFwkProps) => {
+const BottomTabContainerApp = ({tabItems, navigatorProps}: BottonTabContainerFwkProps) => {
   const {colors, selectedTheme} = useTheme();
   return (
     <BottomTabContainerFwk
@@ -34,12 +34,13 @@ const BottomTabContainerApp = ({tabItems}: BottonTabContainerFwkProps) => {
       }))}
       navigatorProps={{
         activeColor: colors.themeColors.primary,
+        inactiveColor: colors.themeColors.fontColor,
+        initialRouteName: navigatorProps?.initialRouteName,
         barStyle: {
           backgroundColor: colors.themeColors.backgroundColor,
           borderTopWidth: 1,
           height: 70,
         },
-        shitfting: true,
       }}
     />
   );
