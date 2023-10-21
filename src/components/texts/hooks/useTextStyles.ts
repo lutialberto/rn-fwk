@@ -29,5 +29,8 @@ const getStyles = (colors: Colors) => {
       color: colors.nonThemeColors.red,
       fontSize: 12,
     },
+    screenTitle: {
+      fontSize: 24,
+    },
   });
 };
