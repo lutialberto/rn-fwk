@@ -21,6 +21,7 @@ import {BottomTabContainerAppProps} from './BottomTabContainerAppProps';
  *    children: <TextApp>Tab1</TextApp>,
  *   },
  *  ]}
+ *  initialRouteName='TabDefault'
  * />
  * @dependencies BottomTabContainerFwk, useTheme
  * @param tabItems - bottom tab items
@@ -55,13 +56,13 @@ const getStyles = (colors: Colors) =>
       backgroundColor: colors.themeColors.lowOpacityColor,
     },
     itemContainer: {
-      backgroundColor: colors.themeColors.backgroundColor,
+      backgroundColor: colors.themeColors.cardColor,
       paddingVertical: 10,
       borderTopWidth: 2,
       borderTopColor: 'transparent',
     },
     itemLabel: {
-      color: colors.themeColors.fontColor,
+      color: colors.themeColors.disabledColor,
     },
     itemFocusLabel: {
       color: colors.themeColors.primary,
