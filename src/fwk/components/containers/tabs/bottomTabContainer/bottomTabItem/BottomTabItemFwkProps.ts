@@ -1,7 +1,8 @@
+import {StyleProp, TextStyle, ViewStyle} from 'react-native';
+
 export interface BottomTabItemFwkProps {
-  name: string;
-  children: JSX.Element;
   label: string;
-  icon: (color: string) => JSX.Element;
-  theme?: 'light' | 'dark';
+  onPress: () => void;
+  textStyle: StyleProp<TextStyle>;
+  viewStyle: StyleProp<ViewStyle>;
 }

@@ -1,10 +1,11 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {BottonTabContainerFwkProps} from './BottomTabContainerFwkProps';
-import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import BottomTabItemFwk from './bottomTabItem/BottomTabItemFwk';
+import TextApp from 'components/texts/textApp/TextApp';
 
-const Tab = createMaterialBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 
 /**
  * @description Framework bottom tab container
@@ -14,7 +15,6 @@ const Tab = createMaterialBottomTabNavigator();
  *   {
  *    name: 'Tab1',
  *    label: 'Tab1',
- *    icon: (color) => <Icon name="home" color={color} />,
  *   },
  *   ///...
  *  ]}
@@ -24,16 +24,53 @@ const Tab = createMaterialBottomTabNavigator();
 const BottomTabContainerFwk = ({tabItems, navigatorProps}: BottonTabContainerFwkProps) => {
   return (
     <Tab.Navigator
-      activeColor={navigatorProps?.activeColor}
-      barStyle={navigatorProps?.barStyle}
-      shifting={navigatorProps?.shitfting}
-      inactiveColor={navigatorProps?.inactiveColor}
+      tabBar={props => (
+        <View style={[styles.tabsContainer, navigatorProps?.tabsContainerStyle]}>
+          {props.state.routes.map((route, index) => {
+            const isFocused = props.state.index === index;
+            const onPress = () => {
+              if (isFocused) return;
+              props.navigation.navigate(route.name);
+            };
+
+            return (
+              <BottomTabItemFwk
+                key={route.name}
+                label={route.name}
+                onPress={onPress}
+                textStyle={[
+                  navigatorProps?.tabItem?.labelStyle,
+                  isFocused ? navigatorProps?.tabItem?.labelFocusStyle : null,
+                ]}
+                viewStyle={[
+                  styles.tabItemContainer,
+                  navigatorProps?.tabItem?.containerStyle,
+                  isFocused ? navigatorProps?.tabItem?.containerFocusStyle : null,
+                ]}
+              />
+            );
+          })}
+        </View>
+      )}
       initialRouteName={navigatorProps?.initialRouteName}>
-      {tabItems.map(tab => BottomTabItemFwk(tab))}
+      {tabItems.map(tab => (
+        <Tab.Screen key={tab.name} name={tab.label} children={() => tab.children} />
+      ))}
     </Tab.Navigator>
   );
 };
 
 export default BottomTabContainerFwk;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  tabsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
+  tabItemContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
