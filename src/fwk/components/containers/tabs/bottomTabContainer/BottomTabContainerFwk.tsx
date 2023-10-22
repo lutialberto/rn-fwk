@@ -24,6 +24,9 @@ const Tab = createBottomTabNavigator();
 const BottomTabContainerFwk = ({tabItems, navigatorProps}: BottonTabContainerFwkProps) => {
   return (
     <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
       tabBar={props => (
         <View style={[styles.tabsContainer, navigatorProps?.tabsContainerStyle]}>
           {props.state.routes.map((route, index) => {
