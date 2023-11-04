@@ -20,6 +20,10 @@ const FormsTab = () => {
       label: 'Register',
       onPress: () => navigator.navigate('Forms/Register'),
     },
+    {
+      label: 'Tipos de input',
+      onPress: () => navigator.navigate('Forms/InputTypes'),
+    },
   ];
 
   return (

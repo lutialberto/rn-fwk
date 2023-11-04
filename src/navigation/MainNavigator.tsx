@@ -5,6 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import HomeScreen from 'screens/home/HomeScreen';
 import FormLoginScreen from 'screens/home/tabs/formsTab/screens/login/FormLoginScreen';
 import FormRegisterScreen from 'screens/home/tabs/formsTab/screens/register/FormRegisterScreen';
+import FormInputTypesScreen from 'screens/home/tabs/formsTab/screens/inputTypes/FormInputTypesScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -18,6 +19,7 @@ const MainNavigator = () => {
         <Stack.Screen name={'Home'} component={HomeScreen} />
         <Stack.Screen name={'Forms/Login'} component={FormLoginScreen} />
         <Stack.Screen name={'Forms/Register'} component={FormRegisterScreen} />
+        <Stack.Screen name={'Forms/InputTypes'} component={FormInputTypesScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
