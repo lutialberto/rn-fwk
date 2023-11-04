@@ -36,6 +36,7 @@ function InputTextApp<T extends FieldValues>(props: InputTextAppProps<T>) {
           style: [hookStyles.textDefault, styles.input, props.textInput?.style],
           cursorColor: colors.themeColors.fontColor,
         }}
+        clearIconColor={colors.themeColors.fontColor}
       />
     </InputWrapperApp>
   );
