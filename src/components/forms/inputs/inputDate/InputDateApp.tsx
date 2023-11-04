@@ -4,6 +4,8 @@ import {InputDateAppProps} from './InputDateAppProps';
 import {FieldValues} from 'react-hook-form';
 import InputDateFwk from 'fwk/components/forms/inputs/inputDate/InputDateFwk';
 import InputWrapperApp from '../inputWrapper/InputWrapperApp';
+import {useTextStyles} from 'components/texts/hooks/useTextStyles';
+import {useTheme} from 'hooks/theme';
 
 /**
  * @description Application input date component
@@ -18,6 +20,8 @@ import InputWrapperApp from '../inputWrapper/InputWrapperApp';
  * @param dateInput - date input props
  */
 function InputDateApp<T extends FieldValues>(props: InputDateAppProps<T>) {
+  const {styles: hookStyles} = useTextStyles();
+  const {colors} = useTheme();
   const formatDate = (date?: Date) => {
     if (date === undefined) return '';
     if (props.dateInput?.formatDate) return props.dateInput?.formatDate(date);
@@ -29,7 +33,10 @@ function InputDateApp<T extends FieldValues>(props: InputDateAppProps<T>) {
       <InputDateFwk
         {...props}
         dateInput={{
-          dateStyle: {},
+          dateStyle: {
+            ...hookStyles.textDefault,
+            color: colors.themeColors.fontColor,
+          },
           dateContainerStyle: {},
           formatDate,
         }}
