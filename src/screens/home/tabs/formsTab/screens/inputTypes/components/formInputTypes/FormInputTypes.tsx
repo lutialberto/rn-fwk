@@ -22,7 +22,7 @@ interface Props {
 }
 
 const FormInputTypes = ({onSubmit}: Props) => {
-  const {control, handleSubmit} = useForm<FormInputTypesProps>({
+  const {control, handleSubmit, resetField} = useForm<FormInputTypesProps>({
     defaultValues: {
       text: '',
       boolean: false,
@@ -39,9 +39,14 @@ const FormInputTypes = ({onSubmit}: Props) => {
           autoCapitalize: 'none',
         }}
         label={'Texto'}
+        clearInput={() => resetField('text')}
       />
       <InputBooleanApp formControl={{control: control, name: 'boolean'}} label={'Booleano'} />
-      <InputDateApp formControl={{control: control, name: 'date'}} label={'Fecha'} />
+      <InputDateApp
+        formControl={{control: control, name: 'date'}}
+        label={'Fecha'}
+        clearInput={() => resetField('date')}
+      />
       <InputSelectApp
         formControl={{control: control, name: 'options'}}
         label={'Opciones'}
@@ -52,6 +57,7 @@ const FormInputTypes = ({onSubmit}: Props) => {
             //...
           ],
         }}
+        clearInput={() => resetField('options')}
       />
       <InputTextApp
         formControl={{control: control, name: 'email'}}
@@ -60,6 +66,7 @@ const FormInputTypes = ({onSubmit}: Props) => {
           keyboardType: 'email-address',
         }}
         label={'Email'}
+        clearInput={() => resetField('email')}
       />
       <InputTextApp
         formControl={{control: control, name: 'password'}}
@@ -68,6 +75,7 @@ const FormInputTypes = ({onSubmit}: Props) => {
           secureTextEntry: true,
         }}
         label={'Contraseña'}
+        clearInput={() => resetField('password')}
       />
       <ButtonApp label={'Submit'} onPress={handleSubmit(onSubmit)} containerStyle={styles.submit} />
     </View>
