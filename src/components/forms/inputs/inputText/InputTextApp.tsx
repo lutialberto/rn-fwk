@@ -5,6 +5,7 @@ import {useTextStyles} from 'components/texts/hooks/useTextStyles';
 import InputWrapperApp from '../inputWrapper/InputWrapperApp';
 import {InputTextAppProps} from './InputTextAppProps';
 import {FieldValues} from 'react-hook-form';
+import {Colors, useTheme} from 'hooks/theme';
 
 /**
  * @description Application input text component
@@ -22,14 +23,18 @@ import {FieldValues} from 'react-hook-form';
  * @param error - input wrapper error
  */
 function InputTextApp<T extends FieldValues>(props: InputTextAppProps<T>) {
-  const {styles} = useTextStyles();
+  const {styles: hookStyles} = useTextStyles();
+  const {colors} = useTheme();
+  const styles = getStyles(colors);
+
   return (
     <InputWrapperApp label={props.label} error={props.error}>
       <InputTextFwk
         {...props}
         textInput={{
           ...props.textInput,
-          style: [styles.textDefault, styles2.input, props.textInput?.style],
+          style: [hookStyles.textDefault, styles.input, props.textInput?.style],
+          cursorColor: colors.themeColors.fontColor,
         }}
       />
     </InputWrapperApp>
@@ -38,11 +43,11 @@ function InputTextApp<T extends FieldValues>(props: InputTextAppProps<T>) {
 
 export default InputTextApp;
 
-const styles2 = StyleSheet.create({
-  input: {
-    backgroundColor: 'white',
-    height: 40,
-    padding: 10,
-    borderRadius: 4,
-  },
-});
+const getStyles = (colors: Colors) =>
+  StyleSheet.create({
+    input: {
+      backgroundColor: 'transparent',
+      padding: 5,
+      color: colors.themeColors.fontColor,
+    },
+  });

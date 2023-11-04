@@ -44,7 +44,7 @@ const getStyles = (colors: Colors) =>
   StyleSheet.create({
     label: {},
     children: {
-      borderBottomColor: colors.nonThemeColors.black,
+      borderBottomColor: colors.themeColors.fontColor,
       borderBottomWidth: 1,
     },
   });
