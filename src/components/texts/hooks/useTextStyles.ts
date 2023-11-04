@@ -31,6 +31,7 @@ const getStyles = (colors: Colors) => {
     },
     screenTitle: {
       fontSize: 24,
+      textAlign: 'center',
     },
   });
 };
