@@ -4,6 +4,7 @@ import BottomTabContainerApp from 'components/containers/tabs/bottomTabContainer
 import DefaultTab from './tabs/defaultTab/DefaultTab';
 import UserPreferencesTab from './tabs/userPreferencesTab/UserPreferencesTab';
 import MoreTab from './tabs/moreTab/MoreTab';
+import FormsTab from './tabs/formsTab/FormsTab';
 
 const HomeScreen = () => {
   const tabItems = [
@@ -16,6 +17,11 @@ const HomeScreen = () => {
       name: 'Default',
       label: 'Inicio',
       children: <DefaultTab />,
+    },
+    {
+      name: 'Forms',
+      label: 'Formularios',
+      children: <FormsTab />,
     },
     {
       name: 'More',
