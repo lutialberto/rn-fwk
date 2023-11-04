@@ -18,7 +18,7 @@ export const THEME_DARK: ThemeProps = {
   backgroundColor: black,
   cardColor: '#181818',
   disabledColor: gray,
-  lowOpacityColor: white,
+  lowOpacityColor: gray,
 };
 export const THEME_LIGHT: ThemeProps = {
   primary: blue,

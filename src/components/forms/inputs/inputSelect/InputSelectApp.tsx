@@ -56,7 +56,7 @@ export default InputSelectApp;
 const getStyles = (colors: Colors) => {
   return StyleSheet.create({
     input: {
-      backgroundColor: 'white',
+      backgroundColor: 'transparent',
       height: 40,
       padding: 10,
       borderRadius: 4,

@@ -36,7 +36,7 @@ const InputSelectFwk = <T extends FieldValues>(props: InputSelectFwkProps<T>) =>
   return (
     <View>
       <Pressable onPress={openModal}>
-        <Text style={props.selectInput?.style}>{field.value}</Text>
+        <Text style={props.selectInput?.style}>{field.value?.label}</Text>
       </Pressable>
       <ModalFwk
         {...props.modal}
@@ -50,13 +50,13 @@ const InputSelectFwk = <T extends FieldValues>(props: InputSelectFwkProps<T>) =>
             <Pressable
               key={index}
               onPress={() => {
-                field.onChange(option.value);
+                field.onChange(option);
                 setModalVisible(false);
               }}>
               <Text
                 style={[
                   props.selectInput.itemStyle,
-                  option.value === field.value && props.selectInput.itemSelectedStyle,
+                  option.value === field.value?.value && props.selectInput.itemSelectedStyle,
                 ]}>
                 {option.label}
               </Text>

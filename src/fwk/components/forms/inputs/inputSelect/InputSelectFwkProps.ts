@@ -4,7 +4,7 @@ import {StyleProp, TextStyle, ViewStyle} from 'react-native';
 export interface InputSelectFwkProps<T extends FieldValues> {
   selectInput: {
     style?: StyleProp<TextStyle>;
-    options: {label: string; value: string}[];
+    options: InputSelectOptionFwkProps[];
     itemStyle?: StyleProp<TextStyle>;
     itemSelectedStyle?: StyleProp<TextStyle>;
   };
@@ -14,4 +14,9 @@ export interface InputSelectFwkProps<T extends FieldValues> {
     transparentAreaBackgroundColor: string;
   };
   formControl: UseControllerProps<T>;
+}
+
+export interface InputSelectOptionFwkProps {
+  label: string;
+  value: string;
 }
