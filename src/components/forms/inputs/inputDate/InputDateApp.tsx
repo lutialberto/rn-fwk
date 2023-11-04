@@ -40,6 +40,7 @@ function InputDateApp<T extends FieldValues>(props: InputDateAppProps<T>) {
           dateContainerStyle: {},
           formatDate,
         }}
+        clearIconColor={colors.themeColors.fontColor}
       />
     </InputWrapperApp>
   );

@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import {InputSelectFwkProps} from './InputSelectFwkProps';
 import {FieldValues, useController} from 'react-hook-form';
 import ModalFwk from 'fwk/components/containers/modals/modal/ModalFwk';
+import InputClearIconWrapper from '../../inputClearIconWrapper/InputClearIconWrapper';
 
 /**
  * @description Framework input select component
@@ -35,9 +36,14 @@ const InputSelectFwk = <T extends FieldValues>(props: InputSelectFwkProps<T>) =>
 
   return (
     <View>
-      <Pressable onPress={openModal}>
-        <Text style={props.selectInput?.style}>{field.value?.label}</Text>
-      </Pressable>
+      <InputClearIconWrapper
+        clearIconColor={props.clearIconColor}
+        clearInput={props.clearInput}
+        valueIsEmpty={!!field.value}>
+        <Pressable onPress={openModal}>
+          <Text style={props.selectInput?.style}>{field.value?.label}</Text>
+        </Pressable>
+      </InputClearIconWrapper>
       <ModalFwk
         {...props.modal}
         modalProps={{

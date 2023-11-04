@@ -1,10 +1,9 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import React from 'react';
 import {InputSelectAppProps} from './InputSelectAppProps';
 import {FieldValues} from 'react-hook-form';
 import {useTextStyles} from 'components/texts/hooks/useTextStyles';
 import InputWrapperApp from '../inputWrapper/InputWrapperApp';
-import InputTextFwk from 'fwk/components/forms/inputs/inputText/InputTextFwk';
 import InputSelectFwk from 'fwk/components/forms/inputs/inputSelect/InputSelectFwk';
 import {Colors, useTheme} from 'hooks/theme';
 import {vh} from 'fwk/constants/Dimentions';
@@ -41,6 +40,7 @@ const InputSelectApp = <T extends FieldValues>(props: InputSelectAppProps<T>) =>
           itemStyle: [textStyles.textDefault, styles.item],
           itemSelectedStyle: [styles.itemSelected],
         }}
+        clearIconColor={colors.themeColors.fontColor}
         modal={{
           visibleContainerStyle: styles.visibleContainer,
           closeIconColor: colors.themeColors.fontColor,

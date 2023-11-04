@@ -5,6 +5,7 @@ import InputDateIos from './OSImplementations/InputDateIos/InputDateIos';
 import {InputDateFwkProps} from './InputDateFwkProps';
 import {FieldValues, useController} from 'react-hook-form';
 import {DateTimePickerEvent, AndroidNativeProps} from '@react-native-community/datetimepicker';
+import InputClearIconWrapper from '../../inputClearIconWrapper/InputClearIconWrapper';
 
 /**
  * @description Framework input date component
@@ -19,7 +20,12 @@ import {DateTimePickerEvent, AndroidNativeProps} from '@react-native-community/d
  * @param formControl - form control of the input date
  * @param dateInput - date input props
  */
-function InputDateFwk<T extends FieldValues>({formControl, dateInput}: InputDateFwkProps<T>) {
+function InputDateFwk<T extends FieldValues>({
+  formControl,
+  dateInput,
+  clearIconColor,
+  clearInput,
+}: InputDateFwkProps<T>) {
   const {field} = useController(formControl);
   const [visible, setVisible] = useState(false);
 
@@ -43,9 +49,14 @@ function InputDateFwk<T extends FieldValues>({formControl, dateInput}: InputDate
 
   return (
     <View>
-      <Pressable style={dateInput?.dateContainerStyle} onPress={showDatePicker}>
-        <Text style={dateInput?.dateStyle}>{dateInput?.formatDate(field.value)}</Text>
-      </Pressable>
+      <InputClearIconWrapper
+        clearIconColor={clearIconColor}
+        clearInput={clearInput}
+        valueIsEmpty={!!field.value}>
+        <Pressable style={dateInput?.dateContainerStyle} onPress={showDatePicker}>
+          <Text style={dateInput?.dateStyle}>{dateInput?.formatDate(field.value)}</Text>
+        </Pressable>
+      </InputClearIconWrapper>
       {Platform.OS === 'android' && (
         <InputDateAndroid
           visible={visible}
