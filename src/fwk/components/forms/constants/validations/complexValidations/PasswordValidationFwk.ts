@@ -10,9 +10,9 @@ export const passwordValidation = (minLength?: number) => ({
   ...requiredValidation,
   ...minLengthValidation(minLength ?? 8),
   validate: {
-    containsNumberValidation,
-    containsLowercaseValidation,
-    containsUppercaseValidation,
+    ...containsNumberValidation,
+    ...containsLowercaseValidation,
+    ...containsUppercaseValidation,
   },
 });
 
