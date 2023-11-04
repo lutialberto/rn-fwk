@@ -17,15 +17,14 @@ const FormRegisterScreen = () => {
   const handleSubmit = (data: FormRegisterProps) => {
     navigator.navigate('Home');
     showToast({
-      message: `Login completado!\n${data.email}\n${data.password}`,
+      message: `Registración completada!\n${data.email}\n${data.password}`,
       type: 'success',
       positionFromTop: vh * 10,
     });
   };
 
   return (
-    <ScreenContainerApp>
-      <TextApp style={styles.screenTitle}>Formulario de login</TextApp>
+    <ScreenContainerApp showBackButton title="Formulario registración">
       <FormRegister onSubmit={handleSubmit} />
     </ScreenContainerApp>
   );

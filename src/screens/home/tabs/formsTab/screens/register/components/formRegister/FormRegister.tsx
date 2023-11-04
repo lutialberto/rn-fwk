@@ -54,6 +54,9 @@ const FormRegister = ({onSubmit}: Props) => {
           name: 'passwordConfirm',
           rules: registerValidations.passwordConfirm,
         }}
+        textInput={{
+          secureTextEntry: true,
+        }}
         label={'Confirmar contraseña'}
         error={errors.passwordConfirm?.message}
       />
