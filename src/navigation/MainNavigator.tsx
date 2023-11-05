@@ -10,6 +10,7 @@ import FormValidationsScreen from 'screens/home/tabs/formsTab/screens/validation
 import TextScreen from 'screens/home/tabs/moreTab/screens/text/TextScreen';
 import ButtonScreen from 'screens/home/tabs/moreTab/screens/button/ButtonScreen';
 import ToastScreen from 'screens/home/tabs/moreTab/screens/toast/ToastScreen';
+import SpinnerScreen from 'screens/home/tabs/moreTab/screens/spinner/SpinnerScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -28,6 +29,7 @@ const MainNavigator = () => {
         <Stack.Screen name={'Text'} component={TextScreen} />
         <Stack.Screen name={'Button'} component={ButtonScreen} />
         <Stack.Screen name={'Toast'} component={ToastScreen} />
+        <Stack.Screen name={'Spinner'} component={SpinnerScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

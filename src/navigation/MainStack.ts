@@ -9,6 +9,7 @@ export type MainStackParamList = {
   Text: undefined;
   Button: undefined;
   Toast: undefined;
+  Spinner: undefined;
 };
 
 export type MainScreenNavigationType = NativeStackNavigationProp<MainStackParamList>;
