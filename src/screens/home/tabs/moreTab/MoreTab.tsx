@@ -17,6 +17,10 @@ const MoreTab = () => {
       label: 'Botón',
       onPress: () => navigator.navigate('Button'),
     },
+    {
+      label: 'Tostada',
+      onPress: () => navigator.navigate('Toast'),
+    },
   ];
 
   return (
