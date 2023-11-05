@@ -7,7 +7,7 @@ import {useTextStyles} from 'components/texts/hooks/useTextStyles';
 const TextScreen = () => {
   const {styles} = useTextStyles();
   return (
-    <ScreenContainerApp showBackButton title="Titulo pantalla">
+    <ScreenContainerApp showBackButton title="Textos">
       <TextApp style={styles.screenTitle}>Estilo de título</TextApp>
       <TextApp style={styles.textDefault}>Estilo texto genérico</TextApp>
       <TextApp style={styles.inputError}>Estilo mensaje error formulario</TextApp>
