@@ -1,14 +1,40 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet} from 'react-native';
 import React from 'react';
+import ScreenContainerApp from 'components/containers/screenContainer/ScreenContainerApp';
+import {MainScreenNavigationType} from 'navigation/MainStack';
+import {useNavigation} from '@react-navigation/native';
+import ButtonApp from 'components/buttons/buttonApp/ButtonApp';
 
 const MoreTab = () => {
+  const navigator = useNavigation<MainScreenNavigationType>();
+
+  const screens = [
+    {
+      label: 'Texto',
+      onPress: () => navigator.navigate('Text'),
+    },
+  ];
+
   return (
-    <View>
-      <Text>MoreTab</Text>
-    </View>
+    <ScreenContainerApp>
+      <ScrollView contentContainerStyle={styles.buttonsContainer}>
+        {screens.map(({label, onPress}) => (
+          <ButtonApp key={label} onPress={onPress} label={label} />
+        ))}
+      </ScrollView>
+    </ScreenContainerApp>
   );
 };
 
 export default MoreTab;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  screenTitle: {
+    textAlign: 'center',
+  },
+  buttonsContainer: {
+    gap: 10,
+    flex: 1,
+    justifyContent: 'center',
+  },
+});
