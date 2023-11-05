@@ -24,6 +24,10 @@ const FormsTab = () => {
       label: 'Tipos de input',
       onPress: () => navigator.navigate('Forms/InputTypes'),
     },
+    {
+      label: 'Validaciones',
+      onPress: () => navigator.navigate('Forms/Validations'),
+    },
   ];
 
   return (
