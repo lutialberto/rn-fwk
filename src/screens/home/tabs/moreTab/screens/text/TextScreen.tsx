@@ -8,8 +8,10 @@ const TextScreen = () => {
   const {styles} = useTextStyles();
   return (
     <ScreenContainerApp showBackButton title="Titulo pantalla">
-      <TextApp style={styles.textDefault}>Texto genérico</TextApp>
-      <TextApp style={styles.inputError}>Mensaje error formulario</TextApp>
+      <TextApp style={styles.screenTitle}>Estilo de título</TextApp>
+      <TextApp style={styles.textDefault}>Estilo texto genérico</TextApp>
+      <TextApp style={styles.inputError}>Estilo mensaje error formulario</TextApp>
+      <TextApp>Estilo por defecto</TextApp>
     </ScreenContainerApp>
   );
 };
