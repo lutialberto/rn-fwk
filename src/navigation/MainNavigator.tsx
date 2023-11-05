@@ -8,6 +8,7 @@ import FormRegisterScreen from 'screens/home/tabs/formsTab/screens/register/Form
 import FormInputTypesScreen from 'screens/home/tabs/formsTab/screens/inputTypes/FormInputTypesScreen';
 import FormValidationsScreen from 'screens/home/tabs/formsTab/screens/validations/FormValidationsScreen';
 import TextScreen from 'screens/home/tabs/moreTab/screens/text/TextScreen';
+import ButtonScreen from 'screens/home/tabs/moreTab/screens/button/ButtonScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -24,6 +25,7 @@ const MainNavigator = () => {
         <Stack.Screen name={'Forms/InputTypes'} component={FormInputTypesScreen} />
         <Stack.Screen name={'Forms/Validations'} component={FormValidationsScreen} />
         <Stack.Screen name={'Text'} component={TextScreen} />
+        <Stack.Screen name={'Button'} component={ButtonScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
