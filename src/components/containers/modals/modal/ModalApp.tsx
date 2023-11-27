@@ -24,14 +24,24 @@ import ModalFwk from 'fwk/components/containers/modals/modal/ModalFwk';
  * @param childrenContainerStyle - style of the children container
  * @param visibleContainerStyle - style of the visible container
  */
-const ModalApp = ({visibleContainerStyle, childrenContainerStyle, ...props}: ModalFwkProps) => {
+const ModalApp = ({
+  visibleContainerStyle,
+  childrenContainerStyle,
+  variant = 'modal',
+  ...props
+}: ModalFwkProps) => {
   const {colors} = useTheme();
   const styles = getStyles(colors);
 
   return (
     <ModalFwk
       {...props}
-      visibleContainerStyle={[styles.visibleContainer, visibleContainerStyle]}
+      variant={variant}
+      visibleContainerStyle={[
+        styles.visibleContainer,
+        variant === 'modal' ? styles.visibleContainerModal : styles.visibleContainerBottomsheet,
+        visibleContainerStyle,
+      ]}
       childrenContainerStyle={childrenContainerStyle}
       closeIconColor={colors.themeColors.fontColor}
       transparentAreaBackgroundColor={colors.themeColors.lowOpacityColor}
@@ -44,10 +54,17 @@ export default ModalApp;
 const getStyles = (colors: Colors) => {
   return StyleSheet.create({
     visibleContainer: {
-      width: '75%',
       backgroundColor: colors.themeColors.backgroundColor,
       borderRadius: 15,
       padding: 15,
+    },
+    visibleContainerModal: {
+      width: '75%',
+    },
+    visibleContainerBottomsheet: {
+      width: '100%',
+      borderBottomRightRadius: 0,
+      borderBottomLeftRadius: 0,
     },
   });
 };

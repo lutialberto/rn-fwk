@@ -25,6 +25,10 @@ const MoreTab = () => {
       label: 'Spinner',
       onPress: () => navigator.navigate('Spinner'),
     },
+    {
+      label: 'Modal',
+      onPress: () => navigator.navigate('Modal'),
+    },
   ];
 
   return (
