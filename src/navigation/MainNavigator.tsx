@@ -12,6 +12,7 @@ import ButtonScreen from 'screens/home/tabs/moreTab/screens/button/ButtonScreen'
 import ToastScreen from 'screens/home/tabs/moreTab/screens/toast/ToastScreen';
 import SpinnerScreen from 'screens/home/tabs/moreTab/screens/spinner/SpinnerScreen';
 import ModalScreen from 'screens/home/tabs/moreTab/screens/modal/ModalScreen';
+import ThemePicker from 'screens/home/tabs/userPreferencesTab/components/themePicker/ThemePicker';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -23,6 +24,7 @@ const MainNavigator = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name={'Home'} component={HomeScreen} />
+        <Stack.Screen name={'Preferences/Theme'} component={ThemePicker} />
         <Stack.Screen name={'Forms/Login'} component={FormLoginScreen} />
         <Stack.Screen name={'Forms/Register'} component={FormRegisterScreen} />
         <Stack.Screen name={'Forms/InputTypes'} component={FormInputTypesScreen} />

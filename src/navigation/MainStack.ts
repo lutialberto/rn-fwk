@@ -2,6 +2,7 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
 export type MainStackParamList = {
   Home: undefined;
+  'Preferences/Theme': undefined;
   'Forms/Login': undefined;
   'Forms/Register': undefined;
   'Forms/InputTypes': undefined;
