@@ -1,15 +1,14 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
 import {useTheme} from 'hooks/theme';
 import TextApp from 'components/texts/textApp/TextApp';
 import ButtonApp from 'components/buttons/buttonApp/ButtonApp';
-import CardApp from 'components/containers/cards/card/CardApp';
+import ScreenContainerApp from 'components/containers/screenContainer/ScreenContainerApp';
 
-const ThemePicker = () => {
+const ThemePickerScreen = () => {
   const {changeTheme, themeOptions, selectedTheme} = useTheme();
   return (
-    <CardApp>
-      <TextApp>Paleta de colores actual: {selectedTheme}</TextApp>
+    <ScreenContainerApp title="Paleta de colores" showBackButton>
       <TextApp>
         A continueación se listan las paletas de colores configuradas. Presiona sobre alguna para
         utilizarla en la app
@@ -24,11 +23,11 @@ const ThemePicker = () => {
           />
         ))}
       </View>
-    </CardApp>
+    </ScreenContainerApp>
   );
 };
 
-export default ThemePicker;
+export default ThemePickerScreen;
 
 const styles = StyleSheet.create({
   container: {
