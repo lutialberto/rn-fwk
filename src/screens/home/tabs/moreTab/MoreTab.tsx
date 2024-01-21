@@ -1,56 +1,47 @@
-import {ScrollView, StyleSheet} from 'react-native';
 import React from 'react';
 import ScreenContainerApp from 'components/containers/screenContainer/ScreenContainerApp';
 import {MainScreenNavigationType} from 'navigation/MainStack';
 import {useNavigation} from '@react-navigation/native';
-import ButtonApp from 'components/buttons/buttonApp/ButtonApp';
+import SectionList, {SectionListProps} from 'components/containers/sectionList/SectionList';
 
 const MoreTab = () => {
   const navigator = useNavigation<MainScreenNavigationType>();
 
-  const screens = [
-    {
-      label: 'Texto',
-      onPress: () => navigator.navigate('Text'),
-    },
-    {
-      label: 'Botón',
-      onPress: () => navigator.navigate('Button'),
-    },
-    {
-      label: 'Tostada',
-      onPress: () => navigator.navigate('Toast'),
-    },
-    {
-      label: 'Spinner',
-      onPress: () => navigator.navigate('Spinner'),
-    },
-    {
-      label: 'Modal',
-      onPress: () => navigator.navigate('Modal'),
-    },
-  ];
+  const list: SectionListProps = {
+    sections: [
+      {
+        name: 'Componentes genéricos reutilizables',
+        items: [
+          {
+            name: 'Texto',
+            onPress: () => navigator.navigate('Text'),
+          },
+          {
+            name: 'Botón',
+            onPress: () => navigator.navigate('Button'),
+          },
+          {
+            name: 'Tostada',
+            onPress: () => navigator.navigate('Toast'),
+          },
+          {
+            name: 'Spinner',
+            onPress: () => navigator.navigate('Spinner'),
+          },
+          {
+            name: 'Modal',
+            onPress: () => navigator.navigate('Modal'),
+          },
+        ],
+      },
+    ],
+  };
 
   return (
     <ScreenContainerApp>
-      <ScrollView contentContainerStyle={styles.buttonsContainer}>
-        {screens.map(({label, onPress}) => (
-          <ButtonApp key={label} onPress={onPress} label={label} />
-        ))}
-      </ScrollView>
+      <SectionList sections={list.sections} />
     </ScreenContainerApp>
   );
 };
 
 export default MoreTab;
-
-const styles = StyleSheet.create({
-  screenTitle: {
-    textAlign: 'center',
-  },
-  buttonsContainer: {
-    gap: 10,
-    flex: 1,
-    justifyContent: 'center',
-  },
-});
