@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {ScrollView, StyleSheet} from 'react-native';
 import React from 'react';
 import ScreenContainerApp from 'components/containers/screenContainer/ScreenContainerApp';
 import TextApp from 'components/texts/textApp/TextApp';
@@ -9,44 +9,48 @@ import SearchIcon from 'assets/svg/SearchIcon.svg';
 
 const ButtonScreen = () => {
   return (
-    <ScreenContainerApp showBackButton title="Botones" style={{gap: 10}}>
-      <TextApp>Botones básicos</TextApp>
-      <ButtonApp label={'Botón sin variante definida'} onPress={() => {}} />
-      <ButtonApp label={'Botón defecto'} variant="default" onPress={() => {}} />
-      <ButtonApp label={'Botón con bordes'} variant="outline" onPress={() => {}} />
-      <ButtonApp label={'Botón solo texto'} variant="textOnly" onPress={() => {}} />
+    <ScreenContainerApp showBackButton title="Botones">
+      <ScrollView fadingEdgeLength={1000} contentContainerStyle={{gap: 10}}>
+        <TextApp>Botones básicos</TextApp>
+        <ButtonApp label={'Botón primario'} variant="default" onPress={() => {}} />
+        <ButtonApp label={'Botón con bordes'} variant="outline" onPress={() => {}} />
+        <ButtonApp label={'Botón solo texto'} variant="textOnly" onPress={() => {}} />
 
-      <ButtonApp enabled={false} label={'Botón defecto - deshabilitado'} onPress={() => {}} />
-      <ButtonApp
-        enabled={false}
-        label={'Botón con bordes - deshabilitado'}
-        variant="outline"
-        onPress={() => {}}
-      />
-      <ButtonApp
-        enabled={false}
-        label={'Botón solo texto - deshabilitado'}
-        variant="textOnly"
-        onPress={() => {}}
-      />
+        <TextApp>Botones deshabilitados</TextApp>
+        <ButtonApp enabled={false} label={'Botón primario'} onPress={() => {}} />
+        <ButtonApp
+          enabled={false}
+          label={'Botón con bordes'}
+          variant="outline"
+          onPress={() => {}}
+        />
+        <ButtonApp
+          enabled={false}
+          label={'Botón solo texto'}
+          variant="textOnly"
+          onPress={() => {}}
+        />
 
-      <ButtonApp
-        label={'Texto + ícono'}
-        icon={<SearchIcon style={{color: 'red'}} />}
-        onPress={() => {}}
-      />
-      <ButtonApp icon={<SearchIcon style={{color: 'red'}} />} onPress={() => {}} />
+        <TextApp>Botones con íconos</TextApp>
+        <ButtonApp
+          label={'Texto + ícono'}
+          icon={<SearchIcon style={{color: 'red'}} />}
+          onPress={() => {}}
+        />
+        <ButtonApp icon={<SearchIcon style={{color: 'red'}} />} onPress={() => {}} />
 
-      <ButtonApp
-        label={'Con estilo container custom'}
-        containerStyle={{backgroundColor: 'red', marginHorizontal: 25 * vw, borderRadius: 0}}
-        onPress={() => {}}
-      />
-      <ButtonApp
-        label={'Con estilo label custom'}
-        labelStyle={{color: 'red', fontSize: 18}}
-        onPress={() => {}}
-      />
+        <TextApp>Botones customizados</TextApp>
+        <ButtonApp
+          label={'Con estilo container custom'}
+          containerStyle={{backgroundColor: 'red', marginHorizontal: 25 * vw, borderRadius: 0}}
+          onPress={() => {}}
+        />
+        <ButtonApp
+          label={'Con estilo label custom'}
+          labelStyle={{color: 'red', fontSize: 18}}
+          onPress={() => {}}
+        />
+      </ScrollView>
     </ScreenContainerApp>
   );
 };
