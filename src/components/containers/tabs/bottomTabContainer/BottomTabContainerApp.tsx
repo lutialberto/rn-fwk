@@ -53,7 +53,7 @@ export default BottomTabContainerApp;
 const getStyles = (colors: Colors) =>
   StyleSheet.create({
     container: {
-      backgroundColor: colors.themeColors.lowOpacityColor,
+      backgroundColor: colors.themeColors.cardColor,
     },
     itemContainer: {
       backgroundColor: colors.themeColors.cardColor,

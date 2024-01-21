@@ -19,7 +19,9 @@ import {BottomTabItemFwkProps} from './BottomTabItemFwkProps';
 const BottomTabItemFwk = ({label, onPress, textStyle, viewStyle}: BottomTabItemFwkProps) => {
   return (
     <Pressable onPress={onPress} style={viewStyle}>
-      <Text style={textStyle}>{label}</Text>
+      <Text numberOfLines={1} style={textStyle}>
+        {label}
+      </Text>
     </Pressable>
   );
 };
