@@ -5,17 +5,23 @@ import TextApp from 'components/texts/textApp/TextApp';
 import {useTextStyles} from 'components/texts/hooks/useTextStyles';
 
 const TextScreen = () => {
-  const {styles} = useTextStyles();
+  const {styles: hookStyles} = useTextStyles();
   return (
     <ScreenContainerApp showBackButton title="Textos">
-      <TextApp style={styles.screenTitle}>Estilo de título</TextApp>
-      <TextApp style={styles.textDefault}>Estilo texto genérico</TextApp>
-      <TextApp style={styles.inputError}>Estilo mensaje error formulario</TextApp>
       <TextApp>Estilo por defecto</TextApp>
+      <TextApp style={hookStyles.screenTitle}>Estilo de título</TextApp>
+      <TextApp style={hookStyles.inputError}>Estilo mensaje error formulario</TextApp>
+      <TextApp style={styles.customStyles}>Estilo custom</TextApp>
     </ScreenContainerApp>
   );
 };
 
 export default TextScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  customStyles: {
+    color: 'green',
+    fontSize: 18,
+    textTransform: 'uppercase',
+  },
+});
