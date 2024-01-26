@@ -7,6 +7,7 @@ export type MainStackParamList = {
   'Forms/Register': undefined;
   'Forms/InputTypes': undefined;
   'Forms/Validations': undefined;
+  Icon: undefined;
   Text: undefined;
   Button: undefined;
   Toast: undefined;
