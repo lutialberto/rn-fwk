@@ -19,7 +19,7 @@ const IconScreen = () => {
   const {colors} = useTheme();
 
   return (
-    <ScreenContainerApp title="Íconos">
+    <ScreenContainerApp showBackButton title="Íconos">
       <TextApp>- Estan disponibles para usarse que cualquier parte de la aplicación</TextApp>
       <TextApp>- Se encuentran en 'assets/svg'</TextApp>
       <TextApp>- Solamente se necesita definir la prop color y opcionalmente height/width</TextApp>
