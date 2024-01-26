@@ -12,9 +12,28 @@ const DefaultTab = () => {
         Esta aplicación tiene los siguientes objetivos:{' '}
       </TextApp>
       <View style={styles.objectivesContainer}>
-        <TextApp>- Visualizar y probar las distintas features desarrolladas</TextApp>
         <TextApp>
-          - Servir como estructura de proyecto modelo y como estandar para futuras apps
+          - Desarrollar componentes genéricos con 3 niveles de desarrollo: factory, app e instancia.
+        </TextApp>
+        <TextApp>
+          Factory: define la implementación, la funcionalidad y la interfaz. Debe ser
+          suficientemente genérico como para poder ser usada en calquier app.
+        </TextApp>
+        <TextApp>
+          App: se apoya en el de factory, en caso de existir alguno. Complementa y/o sobreescribe
+          con configuración específica para la app en cuestión.
+        </TextApp>
+        <TextApp>
+          Instancia: es la utilizada en las pantallas / componentes / hooks de la app.
+        </TextApp>
+
+        <TextApp>
+          - Documentar con ejemplos, snippets y comentarios como utilizar los hooks / componentes y
+          cuales son sus dependencias.
+        </TextApp>
+
+        <TextApp>
+          - Definir un criterio claro sobre estructurar un proyecto que sea escalable y mantenible.
         </TextApp>
         <TextApp>- </TextApp>
       </View>
