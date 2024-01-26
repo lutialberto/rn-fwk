@@ -3,6 +3,7 @@ import React from 'react';
 import ScreenContainerApp from 'components/containers/screenContainer/ScreenContainerApp';
 import TextApp from 'components/texts/textApp/TextApp';
 import {useTextStyles} from 'components/texts/hooks/useTextStyles';
+import TextHideableExample from './TextHideableExample';
 
 const TextScreen = () => {
   const {styles: hookStyles} = useTextStyles();
@@ -12,6 +13,7 @@ const TextScreen = () => {
       <TextApp style={hookStyles.screenTitle}>Estilo de título</TextApp>
       <TextApp style={hookStyles.inputError}>Estilo mensaje error formulario</TextApp>
       <TextApp style={styles.customStyles}>Estilo custom</TextApp>
+      <TextHideableExample />
     </ScreenContainerApp>
   );
 };
