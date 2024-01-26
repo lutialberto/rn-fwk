@@ -10,7 +10,16 @@ const MoreTab = () => {
   const list: SectionListProps = {
     sections: [
       {
-        name: 'Componentes genéricos reutilizables',
+        name: 'Assets',
+        items: [
+          {
+            name: 'Íconos',
+            onPress: () => navigator.navigate('Icon'),
+          },
+        ],
+      },
+      {
+        name: 'Componentes',
         items: [
           {
             name: 'Texto',
@@ -19,10 +28,6 @@ const MoreTab = () => {
           {
             name: 'Botón',
             onPress: () => navigator.navigate('Button'),
-          },
-          {
-            name: 'Tostada',
-            onPress: () => navigator.navigate('Toast'),
           },
           {
             name: 'Spinner',
@@ -34,11 +39,20 @@ const MoreTab = () => {
           },
         ],
       },
+      {
+        name: 'Hooks',
+        items: [
+          {
+            name: 'Tostada',
+            onPress: () => navigator.navigate('Toast'),
+          },
+        ],
+      },
     ],
   };
 
   return (
-    <ScreenContainerApp>
+    <ScreenContainerApp title="Componentes genéricos reutilizables">
       <SectionList sections={list.sections} />
     </ScreenContainerApp>
   );
