@@ -34,6 +34,10 @@ const MoreTab = () => {
             onPress: () => navigator.navigate('Spinner'),
           },
           {
+            name: 'Card',
+            onPress: () => navigator.navigate('Card'),
+          },
+          {
             name: 'Modal',
             onPress: () => navigator.navigate('Modal'),
           },

@@ -10,6 +10,7 @@ export type MainStackParamList = {
   Icon: undefined;
   Text: undefined;
   Button: undefined;
+  Card: undefined;
   Toast: undefined;
   Spinner: undefined;
   Modal: undefined;
