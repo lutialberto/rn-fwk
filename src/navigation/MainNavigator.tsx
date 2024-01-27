@@ -17,6 +17,14 @@ import IconScreen from 'screens/home/tabs/moreTab/screens/icon/IconScreen';
 import CardScreen from 'screens/home/tabs/moreTab/screens/card/CardScreen';
 import SectionListScreen from 'screens/home/tabs/moreTab/screens/sectionList/SectionListScreen';
 import TabScreen from 'screens/home/tabs/moreTab/screens/tab/TabScreen';
+import SnippetComponentScreen from 'screens/home/tabs/moreTab/screens/snippets/screens/snippetComponent/SnippetComponentScreen';
+import SnippetFormScreen from 'screens/home/tabs/moreTab/screens/snippets/screens/snippetForm/SnippetFormScreen';
+import SnippetHookScreen from 'screens/home/tabs/moreTab/screens/snippets/screens/snippetHook/SnippetHookScreen';
+import SnippetNavigationScreen from 'screens/home/tabs/moreTab/screens/snippets/screens/snippetNavigation/SnippetNavigationScreen';
+import SnippetServiceScreen from 'screens/home/tabs/moreTab/screens/snippets/screens/snippetService/SnippetServiceScreen';
+import SnippetTabScreen from 'screens/home/tabs/moreTab/screens/snippets/screens/snippetTab/SnippetTabScreen';
+import SnippetDebugScreen from 'screens/home/tabs/moreTab/screens/snippets/screens/snippetDebug/SnippetDebugScreen';
+import SnippetGeneralScreen from 'screens/home/tabs/moreTab/screens/snippets/screens/snippetGeneral/SnippetGeneralScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -42,6 +50,15 @@ const MainNavigator = () => {
         <Stack.Screen name={'Toast'} component={ToastScreen} />
         <Stack.Screen name={'Spinner'} component={SpinnerScreen} />
         <Stack.Screen name={'Modal'} component={ModalScreen} />
+
+        <Stack.Screen name={'Snippets/Components'} component={SnippetComponentScreen} />
+        <Stack.Screen name={'Snippets/Forms'} component={SnippetFormScreen} />
+        <Stack.Screen name={'Snippets/Hooks'} component={SnippetHookScreen} />
+        <Stack.Screen name={'Snippets/Navigation'} component={SnippetNavigationScreen} />
+        <Stack.Screen name={'Snippets/Service'} component={SnippetServiceScreen} />
+        <Stack.Screen name={'Snippets/Tab'} component={SnippetTabScreen} />
+        <Stack.Screen name={'Snippets/Debug'} component={SnippetDebugScreen} />
+        <Stack.Screen name={'Snippets/General'} component={SnippetGeneralScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
