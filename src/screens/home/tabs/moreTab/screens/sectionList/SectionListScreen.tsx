@@ -31,7 +31,7 @@ const SectionListScreen = () => {
   };
 
   return (
-    <ScreenContainerApp title="Sección">
+    <ScreenContainerApp title="Sección" showBackButton>
       <SectionList sections={list.sections} />
     </ScreenContainerApp>
   );
