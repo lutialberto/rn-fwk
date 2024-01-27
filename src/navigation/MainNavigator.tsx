@@ -16,6 +16,7 @@ import ThemePickerScreen from 'screens/home/tabs/userPreferencesTab/screens/them
 import IconScreen from 'screens/home/tabs/moreTab/screens/icon/IconScreen';
 import CardScreen from 'screens/home/tabs/moreTab/screens/card/CardScreen';
 import SectionListScreen from 'screens/home/tabs/moreTab/screens/sectionList/SectionListScreen';
+import TabScreen from 'screens/home/tabs/moreTab/screens/tab/TabScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -37,6 +38,7 @@ const MainNavigator = () => {
         <Stack.Screen name={'Button'} component={ButtonScreen} />
         <Stack.Screen name={'Card'} component={CardScreen} />
         <Stack.Screen name={'SectionList'} component={SectionListScreen} />
+        <Stack.Screen name={'Tab'} component={TabScreen} />
         <Stack.Screen name={'Toast'} component={ToastScreen} />
         <Stack.Screen name={'Spinner'} component={SpinnerScreen} />
         <Stack.Screen name={'Modal'} component={ModalScreen} />
