@@ -38,6 +38,10 @@ const MoreTab = () => {
             onPress: () => navigator.navigate('Card'),
           },
           {
+            name: 'Sección',
+            onPress: () => navigator.navigate('SectionList'),
+          },
+          {
             name: 'Modal',
             onPress: () => navigator.navigate('Modal'),
           },

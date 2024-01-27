@@ -15,6 +15,7 @@ import ModalScreen from 'screens/home/tabs/moreTab/screens/modal/ModalScreen';
 import ThemePickerScreen from 'screens/home/tabs/userPreferencesTab/screens/themePicker/ThemePickerScreen';
 import IconScreen from 'screens/home/tabs/moreTab/screens/icon/IconScreen';
 import CardScreen from 'screens/home/tabs/moreTab/screens/card/CardScreen';
+import SectionListScreen from 'screens/home/tabs/moreTab/screens/sectionList/SectionListScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -35,6 +36,7 @@ const MainNavigator = () => {
         <Stack.Screen name={'Text'} component={TextScreen} />
         <Stack.Screen name={'Button'} component={ButtonScreen} />
         <Stack.Screen name={'Card'} component={CardScreen} />
+        <Stack.Screen name={'SectionList'} component={SectionListScreen} />
         <Stack.Screen name={'Toast'} component={ToastScreen} />
         <Stack.Screen name={'Spinner'} component={SpinnerScreen} />
         <Stack.Screen name={'Modal'} component={ModalScreen} />
