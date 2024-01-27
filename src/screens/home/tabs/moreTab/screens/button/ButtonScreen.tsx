@@ -10,7 +10,10 @@ import SearchIcon from 'assets/svg/SearchIcon.svg';
 const ButtonScreen = () => {
   return (
     <ScreenContainerApp showBackButton title="Botones">
-      <ScrollView fadingEdgeLength={1000} contentContainerStyle={{gap: 10}}>
+      <ScrollView
+        fadingEdgeLength={1000}
+        contentContainerStyle={{gap: 10}}
+        showsVerticalScrollIndicator={false}>
         <TextApp>Botones básicos</TextApp>
         <ButtonApp label={'Botón primario'} variant="default" onPress={() => {}} />
         <ButtonApp label={'Botón con bordes'} variant="outline" onPress={() => {}} />

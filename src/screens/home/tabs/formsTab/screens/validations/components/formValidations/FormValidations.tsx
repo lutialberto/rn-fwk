@@ -55,7 +55,7 @@ const FormValidations = ({onSubmit}: Props) => {
 
   return (
     <>
-      <ScrollView>
+      <ScrollView fadingEdgeLength={1000} showsVerticalScrollIndicator={false}>
         <KeyboardAvoidingView style={styles.container}>
           <InputTextApp
             formControl={{control: control, name: 'required', rules: {...requiredValidation}}}

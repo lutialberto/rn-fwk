@@ -24,7 +24,7 @@ const SectionList = (props: SectionListProps) => {
   const styles = getStyles(colors);
 
   return (
-    <ScrollView fadingEdgeLength={10000}>
+    <ScrollView fadingEdgeLength={10000} showsVerticalScrollIndicator={false}>
       {props.sections.map((section, index) => (
         <View key={index}>
           <SectionName name={section.name} />
