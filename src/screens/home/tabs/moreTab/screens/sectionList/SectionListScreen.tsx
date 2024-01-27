@@ -1,11 +1,12 @@
 import {StyleSheet} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import ScreenContainerApp from 'components/containers/screenContainer/ScreenContainerApp';
-import TextApp from 'components/texts/textApp/TextApp';
 import SectionList, {SectionListProps} from 'components/containers/sectionList/SectionList';
 import SectionSupportText from 'components/containers/sectionList/components/sectionSupportText/SectionSupportText';
+import ButtonApp from 'components/buttons/buttonApp/ButtonApp';
 
 const SectionListScreen = () => {
+  const [showSearchFilter, setShowSearchFilter] = useState(true);
   const list: SectionListProps = {
     sections: [
       {
@@ -31,12 +32,21 @@ const SectionListScreen = () => {
   };
 
   return (
-    <ScreenContainerApp title="Sección" showBackButton>
-      <SectionList sections={list.sections} />
+    <ScreenContainerApp title="Sección" showBackButton style={styles.screen}>
+      <SectionList sections={list.sections} showSearchFilter={showSearchFilter} />
+      <ButtonApp
+        label={showSearchFilter ? 'Esconder buscador' : 'Mostrar buscador'}
+        onPress={() => setShowSearchFilter(prev => !prev)}
+      />
     </ScreenContainerApp>
   );
 };
 
 export default SectionListScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  screen: {
+    justifyContent: 'space-between',
+    paddingBottom: 10,
+  },
+});
