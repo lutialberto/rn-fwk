@@ -23,14 +23,14 @@ export interface SectionListItemProps {
 const SectionList = (props: SectionListProps) => {
   const [list, setList] = useState<SectionListSectionsProps[]>(props.sections);
   return (
-    <View style={{gap: 15}}>
+    <View style={{gap: 15, flex: 1}}>
       {(props.showSearchFilter ?? false) && (
         <SectionListSearchFilter
           sections={props.sections}
           setList={filteredSections => setList(filteredSections)}
         />
       )}
-      <ScrollView fadingEdgeLength={10000} showsVerticalScrollIndicator={false}>
+      <ScrollView fadingEdgeLength={200} showsVerticalScrollIndicator={false}>
         {list.map((section, index) => (
           <View key={index}>
             <SectionName name={section.name} />
