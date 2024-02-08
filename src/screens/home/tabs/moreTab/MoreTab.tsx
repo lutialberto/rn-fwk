@@ -21,6 +21,7 @@ const MoreTab = () => {
         {name: 'Solapa', onPress: () => navigator.navigate('Tab')},
         {name: 'Modal', onPress: () => navigator.navigate('Modal')},
         {name: 'Carrusel', onPress: () => navigator.navigate('Carrousel')},
+        {name: 'Porta papeles', onPress: () => navigator.navigate('Clipboard')},
       ],
     },
     {

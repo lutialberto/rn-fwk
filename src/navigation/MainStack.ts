@@ -19,6 +19,7 @@ export type MainStackParamList = {
   Spinner: undefined;
   Modal: undefined;
   Carrousel: undefined;
+  Clipboard: undefined;
 
   'Snippets/Components': undefined;
   'Snippets/Forms': undefined;

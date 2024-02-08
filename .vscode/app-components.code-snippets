@@ -57,6 +57,14 @@
     ],
     "description": "Carrousel component"
   },
+  "Clipboard": {
+    "scope": "typescriptreact",
+    "prefix": "appClipboard",
+    "body": [
+      "<TextCopyToClipboardApp$1 textToCopy={'texto...'} />"
+    ],
+    "description": "Clipboard component"
+  },
   "Spinner": {
     "scope": "typescriptreact",
     "prefix": "appSpinner",
