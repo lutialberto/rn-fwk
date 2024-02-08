@@ -47,6 +47,16 @@
     ],
     "description": "BottomSheet component"
   },
+  "Carrousel": {
+    "scope": "typescriptreact",
+    "prefix": "appCarrousel",
+    "body": [
+      "<CarrouselApp$1",
+      " items={[<TextApp>Page 1 </TextApp>, <TextApp>Page 2</TextApp>, <TextApp>Page 3</TextApp>]}",
+      "/>"
+    ],
+    "description": "Carrousel component"
+  },
   "Spinner": {
     "scope": "typescriptreact",
     "prefix": "appSpinner",

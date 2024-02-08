@@ -18,6 +18,7 @@ export type MainStackParamList = {
   Toast: undefined;
   Spinner: undefined;
   Modal: undefined;
+  Carrousel: undefined;
 
   'Snippets/Components': undefined;
   'Snippets/Forms': undefined;

@@ -25,6 +25,7 @@ import SnippetServiceScreen from 'screens/home/tabs/moreTab/screens/snippets/scr
 import SnippetTabScreen from 'screens/home/tabs/moreTab/screens/snippets/screens/snippetTab/SnippetTabScreen';
 import SnippetDebugScreen from 'screens/home/tabs/moreTab/screens/snippets/screens/snippetDebug/SnippetDebugScreen';
 import SnippetGeneralScreen from 'screens/home/tabs/moreTab/screens/snippets/screens/snippetGeneral/SnippetGeneralScreen';
+import CarrouselScreen from 'screens/home/tabs/moreTab/screens/carrousel/CarrouselScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -50,6 +51,7 @@ const MainNavigator = () => {
         <Stack.Screen name={'Toast'} component={ToastScreen} />
         <Stack.Screen name={'Spinner'} component={SpinnerScreen} />
         <Stack.Screen name={'Modal'} component={ModalScreen} />
+        <Stack.Screen name={'Carrousel'} component={CarrouselScreen} />
 
         <Stack.Screen name={'Snippets/Components'} component={SnippetComponentScreen} />
         <Stack.Screen name={'Snippets/Forms'} component={SnippetFormScreen} />
