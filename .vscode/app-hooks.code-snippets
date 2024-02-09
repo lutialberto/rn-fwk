@@ -73,6 +73,14 @@
     ],
     "description": "Use netInfo hook"
   },
+  "SessionStatus hook": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "hookSessionStatus",
+    "body": [
+      "const { login, logout, baseData, customData } = useSessionStatus$1<{ value: string }>();",
+    ],
+    "description": "Use sesion status hook"
+  },
   "LocalAuthentication hook": {
     "scope": "typescript,typescriptreact",
     "prefix": "hookLocalAuthentication",

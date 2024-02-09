@@ -28,6 +28,7 @@ const MoreTab = () => {
       name: 'Hooks',
       items: [
         {name: 'Tostada', onPress: () => navigator.navigate('Toast')},
+        {name: 'Manejo de sesión', onPress: () => navigator.navigate('SessionStatus')},
         {name: 'Chequeo internet', onPress: () => navigator.navigate('NetInfo')},
         {
           name: 'Autenticación biométrica',

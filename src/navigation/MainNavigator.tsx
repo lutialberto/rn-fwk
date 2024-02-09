@@ -29,6 +29,7 @@ import CarrouselScreen from 'screens/home/tabs/moreTab/screens/carrousel/Carrous
 import ClipboardScreen from 'screens/home/tabs/moreTab/screens/clipboard/ClipboardScreen';
 import NetInfoScreen from 'screens/home/tabs/moreTab/screens/netInfo/NetInfoScreen';
 import LocalAutheticationScreen from 'screens/home/tabs/moreTab/screens/localAuthetication/LocalAutheticationScreen';
+import SessionStatusScreen from 'screens/home/tabs/moreTab/screens/sessionStatus/SessionStatusScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -59,6 +60,7 @@ const MainNavigator = () => {
         <Stack.Screen name={'Toast'} component={ToastScreen} />
         <Stack.Screen name={'NetInfo'} component={NetInfoScreen} />
         <Stack.Screen name={'LocalAuthentication'} component={LocalAutheticationScreen} />
+        <Stack.Screen name={'SessionStatus'} component={SessionStatusScreen} />
 
         <Stack.Screen name={'Snippets/Components'} component={SnippetComponentScreen} />
         <Stack.Screen name={'Snippets/Forms'} component={SnippetFormScreen} />

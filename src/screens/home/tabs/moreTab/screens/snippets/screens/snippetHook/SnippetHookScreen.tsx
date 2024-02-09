@@ -10,6 +10,7 @@ const SnippetHookScreen = () => {
     {label: 'Service hook', prefix: 'hookService'},
     {label: 'netInfo hook', prefix: 'hookNetInfo'},
     {label: 'localAuthentication hook', prefix: 'hookLocalAuthentication'},
+    {label: 'sessionStatus hook', prefix: 'hookSessionStatus'},
   ];
   return <SnippetScreenTemplate title="Snippet de hooks" snippetList={snippets} />;
 };
