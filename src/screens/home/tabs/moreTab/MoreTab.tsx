@@ -26,7 +26,10 @@ const MoreTab = () => {
     },
     {
       name: 'Hooks',
-      items: [{name: 'Tostada', onPress: () => navigator.navigate('Toast')}],
+      items: [
+        {name: 'Tostada', onPress: () => navigator.navigate('Toast')},
+        {name: 'Chequeo internet', onPress: () => navigator.navigate('NetInfo')},
+      ],
     },
     {
       name: 'Snippets',

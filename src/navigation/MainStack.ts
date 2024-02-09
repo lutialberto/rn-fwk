@@ -15,11 +15,13 @@ export type MainStackParamList = {
   Card: undefined;
   SectionList: undefined;
   Tab: undefined;
-  Toast: undefined;
   Spinner: undefined;
   Modal: undefined;
   Carrousel: undefined;
   Clipboard: undefined;
+
+  Toast: undefined;
+  NetInfo: undefined;
 
   'Snippets/Components': undefined;
   'Snippets/Forms': undefined;

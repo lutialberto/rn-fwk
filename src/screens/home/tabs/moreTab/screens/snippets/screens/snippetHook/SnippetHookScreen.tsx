@@ -8,6 +8,7 @@ const SnippetHookScreen = () => {
     {label: 'GetStyles', prefix: 'getStyles'},
     {label: 'Toast hook', prefix: 'hookToast'},
     {label: 'Service hook', prefix: 'hookService'},
+    {label: 'netInfo hook', prefix: 'hookNetInfo'},
   ];
   return <SnippetScreenTemplate title="Snippet de hooks" snippetList={snippets} />;
 };

@@ -64,5 +64,13 @@
       "});"
     ],
     "description": "Use service hook"
+  },
+  "NetInfo hook": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "hookNetInfo",
+    "body": [
+      "const { isConnected } = useNetInfo$1();",
+    ],
+    "description": "Use netInfo hook"
   }
 }
