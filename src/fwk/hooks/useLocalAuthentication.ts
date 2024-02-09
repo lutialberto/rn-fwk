@@ -6,7 +6,7 @@ import * as LocalAuthentication from 'expo-local-authentication';
  * @dependencies expo-local-authentication
  */
 export const useLocalAuthentication = () => {
-  const [isSupportedByDevice, setIsSupportedByDevice] = useState<boolean | undefined>(undefined);
+  const [isSupportedByDevice, setIsSupportedByDevice] = useState<boolean>(false);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {

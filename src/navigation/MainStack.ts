@@ -22,6 +22,7 @@ export type MainStackParamList = {
 
   Toast: undefined;
   NetInfo: undefined;
+  LocalAuthentication: undefined;
 
   'Snippets/Components': undefined;
   'Snippets/Forms': undefined;

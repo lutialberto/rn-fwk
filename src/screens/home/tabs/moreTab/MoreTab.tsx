@@ -29,6 +29,10 @@ const MoreTab = () => {
       items: [
         {name: 'Tostada', onPress: () => navigator.navigate('Toast')},
         {name: 'Chequeo internet', onPress: () => navigator.navigate('NetInfo')},
+        {
+          name: 'Autenticación biométrica',
+          onPress: () => navigator.navigate('LocalAuthentication'),
+        },
       ],
     },
     {

@@ -73,6 +73,14 @@
     ],
     "description": "Use netInfo hook"
   },
+  "LocalAuthentication hook": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "hookLocalAuthentication",
+    "body": [
+      "const { authenticate, isSupportedByDevice } = useLocalAuthentication$1();",
+    ],
+    "description": "Use local authetication hook"
+  },
   "TextStyles hook": {
     "scope": "typescript,typescriptreact",
     "prefix": "hookTextStyles",
