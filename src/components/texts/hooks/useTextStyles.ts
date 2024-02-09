@@ -5,7 +5,7 @@ import {Colors, useTheme} from 'hooks/theme';
 /**
  * @description - This hook is used to get the styles for the text component
  * @returns - styles and colors
- * @example - const { styles, colors } = useTextStyles();
+ * @example - const { textStyles, colors } = useTextStyles();
  * @depencies useTheme
  */
 export const useTextStyles = () => {
@@ -13,7 +13,7 @@ export const useTextStyles = () => {
   const styles = getStyles(colors);
 
   return {
-    styles,
+    textStyles: styles,
     colors,
   };
 };

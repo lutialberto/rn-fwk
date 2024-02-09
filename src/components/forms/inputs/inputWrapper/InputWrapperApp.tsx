@@ -23,7 +23,7 @@ import {useTextStyles} from 'components/texts/hooks/useTextStyles';
 const InputWrapperApp = ({children, error, label}: InputWrapperAppProps) => {
   const {colors} = useTheme();
   const styles = getStyles(colors);
-  const {styles: textStyles} = useTextStyles();
+  const {textStyles} = useTextStyles();
 
   return (
     <InputWrapperFwk

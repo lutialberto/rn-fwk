@@ -26,7 +26,7 @@ import {useTextStyles} from 'components/texts/hooks/useTextStyles';
 function InputBooleanApp<T extends FieldValues>(props: InputBooleanAppProps<T>) {
   const {colors} = useTheme();
   const styles = getStyles(colors);
-  const {styles: textStyles} = useTextStyles();
+  const {textStyles} = useTextStyles();
 
   return (
     <View>

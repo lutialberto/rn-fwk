@@ -30,7 +30,7 @@ const TextHideableApp = ({
   text,
   regex = new RegExp(/./g),
 }: TextHideableAppProps) => {
-  const {styles} = useTextStyles();
+  const {textStyles} = useTextStyles();
 
   return (
     <TextHideableFwk
@@ -38,7 +38,7 @@ const TextHideableApp = ({
       regex={regex}
       replaceWith={replaceWith}
       text={text}
-      style={styles.textDefault}
+      style={textStyles.textDefault}
     />
   );
 };

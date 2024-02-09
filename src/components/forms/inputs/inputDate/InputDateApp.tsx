@@ -20,7 +20,7 @@ import {useTheme} from 'hooks/theme';
  * @param dateInput - date input props
  */
 function InputDateApp<T extends FieldValues>(props: InputDateAppProps<T>) {
-  const {styles: hookStyles} = useTextStyles();
+  const {textStyles} = useTextStyles();
   const {colors} = useTheme();
   const formatDate = (date?: Date) => {
     if (date === undefined) return '';
@@ -34,7 +34,7 @@ function InputDateApp<T extends FieldValues>(props: InputDateAppProps<T>) {
         {...props}
         dateInput={{
           dateStyle: {
-            ...hookStyles.textDefault,
+            ...textStyles.textDefault,
             color: colors.themeColors.fontColor,
           },
           dateContainerStyle: {},

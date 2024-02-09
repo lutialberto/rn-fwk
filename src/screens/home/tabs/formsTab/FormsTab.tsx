@@ -6,11 +6,11 @@ import {useTextStyles} from 'components/texts/hooks/useTextStyles';
 import AvailableForms from './components/availableForms/AvailableForms';
 
 const FormsTab = () => {
-  const {styles: hookStyles} = useTextStyles();
+  const {textStyles} = useTextStyles();
 
   return (
     <ScreenContainerApp style={styles.screenContainer}>
-      <TextApp style={[hookStyles.screenTitle, styles.screenTitle]}>Formularios</TextApp>
+      <TextApp style={[textStyles.screenTitle, styles.screenTitle]}>Formularios</TextApp>
       <AvailableForms />
     </ScreenContainerApp>
   );

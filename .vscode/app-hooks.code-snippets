@@ -72,5 +72,13 @@
       "const { isConnected } = useNetInfo$1();",
     ],
     "description": "Use netInfo hook"
+  },
+  "TextStyles hook": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "hookTextStyles",
+    "body": [
+      "const { textStyles, colors } = useTextStyles$1();",
+    ],
+    "description": "Use text styles hook"
   }
 }

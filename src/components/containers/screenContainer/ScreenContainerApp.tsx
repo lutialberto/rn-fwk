@@ -24,7 +24,7 @@ const ScreenContainerApp = ({
   onBackPress,
   showBackButton,
 }: ScreenContainerAppProps) => {
-  const {styles: hookStyles} = useTextStyles();
+  const {textStyles} = useTextStyles();
   const {colors} = useTheme();
   const styles = getStyles(colors);
 
@@ -33,7 +33,7 @@ const ScreenContainerApp = ({
       <>
         <View style={styles.header}>
           <View style={styles.side}>{showBackButton && <ButtonBack onPress={onBackPress} />}</View>
-          {title && <TextApp style={[hookStyles.screenTitle, styles.screenTitle]}>{title}</TextApp>}
+          {title && <TextApp style={[textStyles.screenTitle, styles.screenTitle]}>{title}</TextApp>}
           <View style={styles.side} />
         </View>
         {children}

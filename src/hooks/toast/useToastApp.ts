@@ -27,7 +27,7 @@ interface ToastAppProps {
  */
 export const useToastApp = () => {
   const {showToast: showToastFwk} = useToast();
-  const {styles: textStylesHook} = useTextStyles();
+  const {textStyles: textStylesHook} = useTextStyles();
   const {colors} = useTheme();
   const styles = getStyles(colors);
 

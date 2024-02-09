@@ -9,7 +9,7 @@ import {MainScreenNavigationType} from 'navigation/MainStack';
 
 const UserPreferencesTab = () => {
   const navigator = useNavigation<MainScreenNavigationType>();
-  const {styles: hookStyles} = useTextStyles();
+  const {textStyles} = useTextStyles();
   const list: SectionListProps = {
     sections: [
       {
@@ -26,7 +26,7 @@ const UserPreferencesTab = () => {
 
   return (
     <ScreenContainerApp style={styles.screenContainer}>
-      <TextApp style={[hookStyles.screenTitle, styles.screenTitle]}>Preferencias usuario</TextApp>
+      <TextApp style={[textStyles.screenTitle, styles.screenTitle]}>Preferencias usuario</TextApp>
       <SectionList sections={list.sections} />
     </ScreenContainerApp>
   );

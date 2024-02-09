@@ -23,7 +23,7 @@ import {Colors, useTheme} from 'hooks/theme';
  * @param error - input wrapper error
  */
 function InputTextApp<T extends FieldValues>(props: InputTextAppProps<T>) {
-  const {styles: hookStyles} = useTextStyles();
+  const {textStyles} = useTextStyles();
   const {colors} = useTheme();
   const styles = getStyles(colors);
 
@@ -33,7 +33,7 @@ function InputTextApp<T extends FieldValues>(props: InputTextAppProps<T>) {
         {...props}
         textInput={{
           ...props.textInput,
-          style: [hookStyles.textDefault, styles.input, props.textInput?.style],
+          style: [textStyles.textDefault, styles.input, props.textInput?.style],
           cursorColor: colors.themeColors.fontColor,
         }}
         clearIconColor={colors.themeColors.fontColor}

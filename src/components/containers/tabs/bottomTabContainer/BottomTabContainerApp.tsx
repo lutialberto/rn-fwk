@@ -29,7 +29,7 @@ import {BottomTabContainerAppProps} from './BottomTabContainerAppProps';
 const BottomTabContainerApp = ({tabItems, initialRouteName}: BottomTabContainerAppProps) => {
   const {colors} = useTheme();
   const styles = getStyles(colors);
-  const {styles: hookStyles} = useTextStyles();
+  const {textStyles} = useTextStyles();
 
   return (
     <BottomTabContainerFwk
@@ -38,7 +38,7 @@ const BottomTabContainerApp = ({tabItems, initialRouteName}: BottomTabContainerA
         tabsContainerStyle: styles.container,
         tabItem: {
           containerStyle: styles.itemContainer,
-          labelStyle: [hookStyles.textDefault, styles.itemLabel],
+          labelStyle: [textStyles.textDefault, styles.itemLabel],
           containerFocusStyle: styles.itemFocusContainer,
           labelFocusStyle: styles.itemFocusLabel,
         },

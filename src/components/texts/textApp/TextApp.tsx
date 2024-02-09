@@ -15,10 +15,10 @@ import {useTextStyles} from '../hooks/useTextStyles';
  * @dependencies useTextStyles
  */
 const TextApp = (props: TextProps) => {
-  const {styles} = useTextStyles();
+  const {textStyles} = useTextStyles();
 
   return (
-    <Text {...props} style={[styles.textDefault, props.style]}>
+    <Text {...props} style={[textStyles.textDefault, props.style]}>
       {props.children}
     </Text>
   );

@@ -6,12 +6,12 @@ import {useTextStyles} from 'components/texts/hooks/useTextStyles';
 import TextHideableExample from './TextHideableExample';
 
 const TextScreen = () => {
-  const {styles: hookStyles} = useTextStyles();
+  const {textStyles} = useTextStyles();
   return (
     <ScreenContainerApp showBackButton title="Textos">
       <TextApp>Estilo por defecto</TextApp>
-      <TextApp style={hookStyles.screenTitle}>Estilo de título</TextApp>
-      <TextApp style={hookStyles.inputError}>Estilo mensaje error formulario</TextApp>
+      <TextApp style={textStyles.screenTitle}>Estilo de título</TextApp>
+      <TextApp style={textStyles.inputError}>Estilo mensaje error formulario</TextApp>
       <TextApp style={styles.customStyles}>Estilo custom</TextApp>
       <TextHideableExample />
     </ScreenContainerApp>

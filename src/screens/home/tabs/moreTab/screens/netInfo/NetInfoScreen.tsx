@@ -7,7 +7,7 @@ import {useTextStyles} from 'components/texts/hooks/useTextStyles';
 
 const NetInfoScreen = () => {
   const {isConnected} = useNetInfo();
-  const {styles, colors} = useTextStyles();
+  const {textStyles, colors} = useTextStyles();
 
   return (
     <ScreenContainerApp showBackButton title="Chequeo internet">
@@ -22,12 +22,12 @@ const NetInfoScreen = () => {
             informa de ese cambio
           </TextApp>
           {isConnected && (
-            <TextApp style={[styles.screenTitle, {color: colors.nonThemeColors.yellow}]}>
+            <TextApp style={[textStyles.screenTitle, {color: colors.nonThemeColors.yellow}]}>
               Se detecta acceso a internet
             </TextApp>
           )}
           {!isConnected && (
-            <TextApp style={[styles.screenTitle, {color: colors.nonThemeColors.red}]}>
+            <TextApp style={[textStyles.screenTitle, {color: colors.nonThemeColors.red}]}>
               No se detecta acceso a internet
             </TextApp>
           )}

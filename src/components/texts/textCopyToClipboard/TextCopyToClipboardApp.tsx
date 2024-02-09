@@ -18,7 +18,7 @@ export interface TextCopyToClipboardAppProps {
 const TextCopyToClipboardApp = (props: TextCopyToClipboardAppProps) => {
   const {colors} = useTheme();
   const styles = getStyles(colors);
-  const {styles: textStyles} = useTextStyles();
+  const {textStyles} = useTextStyles();
 
   return (
     <TextCopyToClipboardFwk

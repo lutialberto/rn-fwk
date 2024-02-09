@@ -28,7 +28,7 @@ import {vh} from 'fwk/constants/Dimentions';
 const InputSelectApp = <T extends FieldValues>(props: InputSelectAppProps<T>) => {
   const {colors} = useTheme();
   const styles = getStyles(colors);
-  const {styles: textStyles} = useTextStyles();
+  const {textStyles} = useTextStyles();
 
   return (
     <InputWrapperApp label={props.label} error={props.error}>

@@ -2,7 +2,6 @@ import {ScrollView, StyleSheet} from 'react-native';
 import React from 'react';
 import ScreenContainerApp from 'components/containers/screenContainer/ScreenContainerApp';
 import TextApp from 'components/texts/textApp/TextApp';
-import {useTextStyles} from 'components/texts/hooks/useTextStyles';
 import ButtonApp from 'components/buttons/buttonApp/ButtonApp';
 import {vw} from 'fwk/constants/Dimentions';
 import SearchIcon from 'assets/svg/SearchIcon.svg';
