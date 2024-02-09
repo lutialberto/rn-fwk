@@ -9,6 +9,7 @@ const SnippetComponentScreen = () => {
     {label: 'BottomSheet', prefix: 'appBottomSheet'},
     {label: 'Spinner', prefix: 'appSpinner'},
     {label: 'Carrusel', prefix: 'appCarrousel'},
+    {label: 'Porta papeles', prefix: 'appClipboard'},
   ];
   return <SnippetScreenTemplate title="Snippet de componentes" snippetList={snippets} />;
 };
