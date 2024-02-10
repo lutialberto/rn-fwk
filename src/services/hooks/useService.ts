@@ -27,10 +27,12 @@ export function useService<T>({
       .then(response => {
         setIsLoading(false);
         setData(response);
+        setError(undefined);
         onSuccess(response);
       })
       .catch(err => {
         setIsLoading(false);
+        setData(undefined);
         setError(err);
         onError(err);
       })
