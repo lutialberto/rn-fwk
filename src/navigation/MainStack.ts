@@ -9,21 +9,22 @@ export type MainStackParamList = {
   'Forms/InputTypes': undefined;
   'Forms/Validations': undefined;
 
-  Icon: undefined;
-  Text: undefined;
-  Button: undefined;
-  Card: undefined;
-  SectionList: undefined;
-  Tab: undefined;
-  Spinner: undefined;
-  Modal: undefined;
-  Carrousel: undefined;
-  Clipboard: undefined;
+  'Assets/Icon': undefined;
 
-  Toast: undefined;
-  NetInfo: undefined;
-  LocalAuthentication: undefined;
-  SessionStatus: undefined;
+  'Components/Text': undefined;
+  'Components/Button': undefined;
+  'Components/Card': undefined;
+  'Components/SectionList': undefined;
+  'Components/Tab': undefined;
+  'Components/Spinner': undefined;
+  'Components/Modal': undefined;
+  'Components/Carrousel': undefined;
+  'Components/Clipboard': undefined;
+
+  'Hooks/Toast': undefined;
+  'Hooks/NetInfo': undefined;
+  'Hooks/LocalAuthentication': undefined;
+  'Hooks/SessionStatus': undefined;
 
   'Snippets/Components': undefined;
   'Snippets/Forms': undefined;
