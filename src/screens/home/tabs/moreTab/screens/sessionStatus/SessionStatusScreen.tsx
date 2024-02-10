@@ -10,7 +10,6 @@ import InputTextApp from 'components/forms/inputs/inputText/InputTextApp';
 const SessionStatusScreen = () => {
   const {login, logout, baseData, customData} = useSessionStatus<{value: string}>();
   const {isSignedIn} = baseData;
-  const {content} = customData;
 
   const {control, watch, reset} = useForm<{value: string}>({
     defaultValues: {
@@ -36,7 +35,7 @@ const SessionStatusScreen = () => {
           </TextApp>
           <View>
             <TextApp>A continuación se muestra el contenido guardado de la sesión</TextApp>
-            <TextApp>Valor: {content.value}</TextApp>
+            <TextApp>Valor: {customData.value}</TextApp>
           </View>
           <TextApp>Si presionas logout, estos datos se perderán</TextApp>
           <ButtonApp label={'Borrar'} onPress={handleLogout} />

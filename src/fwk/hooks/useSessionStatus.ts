@@ -3,7 +3,7 @@ import {createJSONStorage, persist} from 'zustand/middleware';
 import {getItemAsync, deleteItemAsync, setItemAsync} from 'expo-secure-store';
 
 type BaseSessionData<T> = {
-  customData: {content: T};
+  customData: T;
   baseData: {
     isSignedIn?: boolean;
   };
@@ -12,7 +12,7 @@ type BaseSessionData<T> = {
 };
 
 const INITIAL_CUSTOM_DATA: BaseSessionData<{}>['customData'] = {
-  content: {},
+  // content: {},
 };
 
 const useDataImpl = create<BaseSessionData<unknown>>()(
@@ -24,7 +24,7 @@ const useDataImpl = create<BaseSessionData<unknown>>()(
       },
       login: (customData: unknown) =>
         set(() => ({
-          customData: {content: customData},
+          customData,
           baseData: {
             isSignedIn: true,
           },
