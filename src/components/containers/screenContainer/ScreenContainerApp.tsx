@@ -32,7 +32,9 @@ const ScreenContainerApp = ({
     <ScreenContainerFwk style={[styles.container, style]}>
       <>
         <View style={styles.header}>
-          <View style={styles.side}>{showBackButton && <ButtonBack onPress={onBackPress} />}</View>
+          <View style={!showBackButton && styles.side}>
+            {showBackButton && <ButtonBack onPress={onBackPress} />}
+          </View>
           {title && <TextApp style={[textStyles.screenTitle, styles.screenTitle]}>{title}</TextApp>}
           <View style={styles.side} />
         </View>
