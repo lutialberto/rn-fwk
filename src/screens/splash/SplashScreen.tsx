@@ -5,7 +5,7 @@ import ScreenContainerApp from 'components/containers/screenContainer/ScreenCont
 const SplashScreen = () => {
   return (
     <ScreenContainerApp style={styles.container}>
-      <Text>Loading...</Text>
+      <Text style={{fontSize: 20}}>SplashScreen loading...</Text>
     </ScreenContainerApp>
   );
 };
