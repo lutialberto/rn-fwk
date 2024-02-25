@@ -11,6 +11,10 @@ const MoreTab = () => {
       items: [{name: 'Íconos', onPress: () => navigator.navigate('Assets/Icon')}],
     },
     {
+      name: 'Gráficos',
+      items: [{name: 'Línea', onPress: () => navigator.navigate('Charts/Line')}],
+    },
+    {
       name: 'Componentes',
       items: [
         {name: 'Texto', onPress: () => navigator.navigate('Components/Text')},
@@ -40,6 +44,7 @@ const MoreTab = () => {
       name: 'Snippets',
       items: [
         {name: 'Componentes', onPress: () => navigator.navigate('Snippets/Components')},
+        {name: 'Gráficos', onPress: () => navigator.navigate('Snippets/Charts')},
         {name: 'Formularios', onPress: () => navigator.navigate('Snippets/Forms')},
         {name: 'Hooks', onPress: () => navigator.navigate('Snippets/Hooks')},
         {name: 'Navegación', onPress: () => navigator.navigate('Snippets/Navigation')},

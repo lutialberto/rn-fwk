@@ -11,6 +11,8 @@ export type MainStackParamList = {
 
   'Assets/Icon': undefined;
 
+  'Charts/Line': undefined;
+
   'Components/Text': undefined;
   'Components/Button': undefined;
   'Components/Card': undefined;
@@ -27,6 +29,7 @@ export type MainStackParamList = {
   'Hooks/SessionStatus': undefined;
 
   'Snippets/Components': undefined;
+  'Snippets/Charts': undefined;
   'Snippets/Forms': undefined;
   'Snippets/Hooks': undefined;
   'Snippets/Navigation': undefined;

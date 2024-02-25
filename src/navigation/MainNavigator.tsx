@@ -10,6 +10,7 @@ import hooksStacks from './stackGroups/hooksStacks';
 import formsStacks from './stackGroups/formsStacks';
 import assetsStacks from './stackGroups/assetsStacks';
 import preferencesStacks from './stackGroups/preferencesStacks';
+import chartsStacks from './stackGroups/chartsStacks';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -24,6 +25,7 @@ const MainNavigator = () => {
         {preferencesStacks()}
         {formsStacks()}
         {assetsStacks()}
+        {chartsStacks()}
         {componentsStacks()}
         {hooksStacks()}
         {snippetsStacks()}

@@ -4,6 +4,7 @@ export const ROUTE_PREFERENCES = 'Preferences';
 export const ROUTE_HOOKS = 'Hooks';
 export const ROUTE_SNIPPETS = 'Snippets';
 export const ROUTE_ASSETS = 'Assets';
+export const ROUTE_CHARTS = 'Charts';
 
 export const ROUTES = {
   HOME: 'Home',
@@ -18,6 +19,9 @@ export const ROUTES = {
   },
   ASSETS: {
     ICON: `${ROUTE_ASSETS}/Icon`,
+  },
+  CHARTS: {
+    LINE: `${ROUTE_CHARTS}/Line`,
   },
   COMPONENTS: {
     TEXT: `${ROUTE_COMPONENTS}/Text`,
@@ -38,6 +42,7 @@ export const ROUTES = {
   },
   SNIPPETS: {
     COMPONENTS: `${ROUTE_SNIPPETS}/Components`,
+    CHARTS: `${ROUTE_SNIPPETS}/Charts`,
     FORMS: `${ROUTE_SNIPPETS}/Forms`,
     HOOKS: `${ROUTE_SNIPPETS}/Hooks`,
     NAVIGATION: `${ROUTE_SNIPPETS}/Navigation`,

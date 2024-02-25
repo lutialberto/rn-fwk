@@ -10,6 +10,7 @@ import SnippetServiceScreen from 'screens/home/tabs/moreTab/screens/snippets/scr
 import SnippetTabScreen from 'screens/home/tabs/moreTab/screens/snippets/screens/snippetTab/SnippetTabScreen';
 import SnippetDebugScreen from 'screens/home/tabs/moreTab/screens/snippets/screens/snippetDebug/SnippetDebugScreen';
 import SnippetGeneralScreen from 'screens/home/tabs/moreTab/screens/snippets/screens/snippetGeneral/SnippetGeneralScreen';
+import SnippetChartScreen from 'screens/home/tabs/moreTab/screens/snippets/screens/snippetChart/SnippetChartScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -19,6 +20,10 @@ const snippetsStacks = () => {
       <Stack.Screen
         name={ROUTES.SNIPPETS.COMPONENTS as keyof MainStackParamList}
         component={SnippetComponentScreen}
+      />
+      <Stack.Screen
+        name={ROUTES.SNIPPETS.CHARTS as keyof MainStackParamList}
+        component={SnippetChartScreen}
       />
       <Stack.Screen
         name={ROUTES.SNIPPETS.FORMS as keyof MainStackParamList}
