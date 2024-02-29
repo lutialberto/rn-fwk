@@ -12,6 +12,7 @@ export type MainStackParamList = {
   'Assets/Icon': undefined;
 
   'Charts/Line': undefined;
+  'Charts/Progress': undefined;
 
   'Components/Text': undefined;
   'Components/Button': undefined;

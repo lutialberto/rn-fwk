@@ -39,6 +39,20 @@
       "  labelsColor={'black'}",
       "/>",
     ],
-    "description": "ChartLine component"
+  },
+  "ChartProgress": {
+    "scope": "typescriptreact",
+    "prefix": "appChartProgress",
+    "body": [
+      "<ProgressChartApp$1",
+      "  data={{",
+      "    labels: ['Swim', 'Bike', 'Run'],",
+      "    data: [0.4, 0.6, 0.8],",
+      "  }}",
+      "  width={vw * 70}",
+      "  height={220}",
+      "/>",
+    ],
+    "description": "ChartProgress component"
   },
 }

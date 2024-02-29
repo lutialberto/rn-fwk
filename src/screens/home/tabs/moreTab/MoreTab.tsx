@@ -12,7 +12,10 @@ const MoreTab = () => {
     },
     {
       name: 'Gráficos',
-      items: [{name: 'Línea', onPress: () => navigator.navigate('Charts/Line')}],
+      items: [
+        {name: 'Línea', onPress: () => navigator.navigate('Charts/Line')},
+        {name: 'Progreso', onPress: () => navigator.navigate('Charts/Progress')},
+      ],
     },
     {
       name: 'Componentes',

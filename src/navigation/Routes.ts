@@ -22,6 +22,7 @@ export const ROUTES = {
   },
   CHARTS: {
     LINE: `${ROUTE_CHARTS}/Line`,
+    PROGRESS: `${ROUTE_CHARTS}/Progress`,
   },
   COMPONENTS: {
     TEXT: `${ROUTE_COMPONENTS}/Text`,
