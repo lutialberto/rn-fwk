@@ -5,6 +5,7 @@ const SnippetChartScreen = () => {
   const snippets = [
     {label: 'Línea', prefix: 'appChartLine'},
     {label: 'Progreso', prefix: 'appChartProgress'},
+    {label: 'Barra', prefix: 'appChartBar'},
   ];
   return <SnippetScreenTemplate title="Snippet de gráficos" snippetList={snippets} />;
 };
