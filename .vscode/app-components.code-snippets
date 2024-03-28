@@ -52,6 +52,10 @@
     "prefix": "appCarrousel",
     "body": [
       "<CarrouselApp$1",
+      " containerStyle={{",
+      "  height: 200,//usar este",
+      "  flex: 1,//o este",
+      " }}",
       " items={[<TextApp>Page 1 </TextApp>, <TextApp>Page 2</TextApp>, <TextApp>Page 3</TextApp>]}",
       "/>"
     ],
