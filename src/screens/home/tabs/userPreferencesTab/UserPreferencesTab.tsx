@@ -1,45 +1,22 @@
 import {StyleSheet} from 'react-native';
 import React from 'react';
 import ScreenContainerApp from 'components/containers/screenContainer/ScreenContainerApp';
-import TextApp from 'components/texts/textApp/TextApp';
-import {useTextStyles} from 'components/texts/hooks/useTextStyles';
-import SectionList, {SectionListProps} from 'components/containers/sectionList/SectionList';
+import SectionList from 'components/containers/sectionList/SectionList';
 import {useNavigation} from '@react-navigation/native';
 import {MainScreenNavigationType} from 'navigation/MainStack';
+import {useUserPreferencesTabSections} from './hooks/useUserPreferencesTabSections';
 
 const UserPreferencesTab = () => {
   const navigator = useNavigation<MainScreenNavigationType>();
-  const {textStyles} = useTextStyles();
-  const list: SectionListProps = {
-    sections: [
-      {
-        name: 'General',
-        items: [
-          {
-            name: 'Paleta de colores',
-            onPress: () => navigator.navigate('Preferences/Theme'),
-          },
-        ],
-      },
-    ],
-  };
+  const sections = useUserPreferencesTabSections(navigator);
 
   return (
-    <ScreenContainerApp style={styles.screenContainer}>
-      <TextApp style={[textStyles.screenTitle, styles.screenTitle]}>Preferencias usuario</TextApp>
-      <SectionList sections={list.sections} />
+    <ScreenContainerApp title="Preferencias usuario">
+      <SectionList sections={sections} />
     </ScreenContainerApp>
   );
 };
 
 export default UserPreferencesTab;
 
-const styles = StyleSheet.create({
-  screenContainer: {
-    paddingHorizontal: 20,
-    gap: 20,
-  },
-  screenTitle: {
-    textAlign: 'center',
-  },
-});
+const styles = StyleSheet.create({});
