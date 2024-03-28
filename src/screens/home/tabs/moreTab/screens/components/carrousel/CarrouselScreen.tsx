@@ -11,6 +11,7 @@ const CarrouselScreen = () => {
       <View style={styles.screenContainer}>
         <CardApp style={{flex: 5}}>
           <CarrouselApp
+            containerStyle={{flex: 1}}
             items={[
               <TextApp>Page 1 </TextApp>,
               <TextApp>Page 2</TextApp>,
@@ -27,6 +28,7 @@ const CarrouselScreen = () => {
         </CardApp>
         <CardApp style={{flex: 1}}>
           <CarrouselApp
+            containerStyle={{flex: 1}}
             items={[
               <TextApp>Page 1 </TextApp>,
               <TextApp>Page 2</TextApp>,

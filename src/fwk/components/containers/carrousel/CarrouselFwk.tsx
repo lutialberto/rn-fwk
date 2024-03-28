@@ -67,7 +67,6 @@ export default CarrouselFwk;
 const indexWidth = 10;
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     gap: 10,
   },
   viewPager: {
