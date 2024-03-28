@@ -16,6 +16,7 @@ const MoreTab = () => {
         {name: 'Línea', onPress: () => navigator.navigate('Charts/Line')},
         {name: 'Progreso', onPress: () => navigator.navigate('Charts/Progress')},
         {name: 'Barra', onPress: () => navigator.navigate('Charts/Bar')},
+        {name: 'Barras Apiladas', onPress: () => navigator.navigate('Charts/StackedBar')},
       ],
     },
     {

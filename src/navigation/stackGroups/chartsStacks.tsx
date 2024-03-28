@@ -5,6 +5,7 @@ import {ROUTES} from 'navigation/Routes';
 import ChartLineScreen from 'screens/home/tabs/moreTab/screens/charts/chartLine/ChartLineScreen';
 import ChartProgressScreen from 'screens/home/tabs/moreTab/screens/charts/chartProgress/ChartProgressScreen';
 import ChartBarScreen from 'screens/home/tabs/moreTab/screens/charts/chartBar/ChartBarScreen';
+import ChartStackedBarScreen from 'screens/home/tabs/moreTab/screens/charts/chartStackedBar/ChartStackedBarScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -22,6 +23,10 @@ const chartsStacks = () => {
       <Stack.Screen
         name={ROUTES.CHARTS.BAR as keyof MainStackParamList}
         component={ChartBarScreen}
+      />
+      <Stack.Screen
+        name={ROUTES.CHARTS.STACKED_BAR as keyof MainStackParamList}
+        component={ChartStackedBarScreen}
       />
     </>
   );

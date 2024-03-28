@@ -66,4 +66,23 @@
     ],
     "description": "ChartBar component"
   },
+  "ChartStackedBar": {
+    "scope": "typescriptreact",
+    "prefix": "appChartStackedBar",
+    "body": [
+      "<ChartStackedBarApp$1",
+      "  barColors={['grey', 'blue', 'yellow']}",
+      "  labels={['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo']}",
+      "  legend={['Nublado', 'Lluvioso', 'Soleado']}",
+      "  dataset={[",
+      "  [1, 2, 3],",
+      "  [2, 4, 6],",
+      "  [3, 6, 9],",
+      "  [4, 8, 12],",
+      "  [5, 10, 15],",
+      "  ]}",
+      "/>",
+    ],
+    "description": "ChartStackedBar component"
+  },
 }
