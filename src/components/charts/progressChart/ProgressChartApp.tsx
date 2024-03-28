@@ -2,6 +2,7 @@ import React from 'react';
 import {ProgressChart} from 'react-native-chart-kit';
 import {ProgressChartData} from 'react-native-chart-kit/dist/ProgressChart';
 import {useTheme} from 'hooks/theme';
+import {getRbgColorProps} from 'fwk/utils/ColorUtils';
 
 interface ProgressChartAppProps {
   data: ProgressChartData;
@@ -35,25 +36,7 @@ const ProgressChartApp = ({
 }: ProgressChartAppProps) => {
   const {colors} = useTheme();
 
-  const getRbgColorProps = () => {
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(
-      hexColor ?? colors.themeColors.primary,
-    );
-    const colorRgb = result
-      ? {
-          r: parseInt(result[1], 16),
-          g: parseInt(result[2], 16),
-          b: parseInt(result[3], 16),
-        }
-      : {
-          r: 255,
-          g: 255,
-          b: 255,
-        };
-    return colorRgb;
-  };
-
-  const {r, g, b} = getRbgColorProps();
+  const {r, g, b} = getRbgColorProps(hexColor ?? colors.themeColors.primary);
 
   return (
     <ProgressChart
