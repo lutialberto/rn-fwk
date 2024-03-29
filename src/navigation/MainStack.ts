@@ -15,6 +15,7 @@ export type MainStackParamList = {
   'Charts/Progress': undefined;
   'Charts/Bar': undefined;
   'Charts/StackedBar': undefined;
+  'Charts/Pie': undefined;
 
   'Components/Text': undefined;
   'Components/Button': undefined;

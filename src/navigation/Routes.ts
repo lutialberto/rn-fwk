@@ -25,6 +25,7 @@ export const ROUTES = {
     PROGRESS: `${ROUTE_CHARTS}/Progress`,
     BAR: `${ROUTE_CHARTS}/Bar`,
     STACKED_BAR: `${ROUTE_CHARTS}/StackedBar`,
+    PIE: `${ROUTE_CHARTS}/Pie`,
   },
   COMPONENTS: {
     TEXT: `${ROUTE_COMPONENTS}/Text`,

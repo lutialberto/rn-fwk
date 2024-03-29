@@ -16,6 +16,7 @@ export const useMoreTabSections = (
         {name: 'Progreso', onPress: () => navigator.navigate('Charts/Progress')},
         {name: 'Barra', onPress: () => navigator.navigate('Charts/Bar')},
         {name: 'Barras Apiladas', onPress: () => navigator.navigate('Charts/StackedBar')},
+        {name: 'Torta', onPress: () => navigator.navigate('Charts/Pie')},
       ],
     },
     {

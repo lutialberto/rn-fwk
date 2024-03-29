@@ -85,4 +85,25 @@
     ],
     "description": "ChartStackedBar component"
   },
+  "ChartPie": {
+    "scope": "typescriptreact",
+    "prefix": "appChartPie",
+    "body": [
+      "<ChartPieApp$1",
+      "  data={[",
+      "    {",
+      "      name: 'Leyenda 1',",
+      "      value: 4,",
+      "      color: 'yellow',",
+      "    },",
+      "    {",
+      "      name: 'Leyenda 2',",
+      "      value: 6,",
+      "      color: 'red',",
+      "    },",
+      "  ]}",
+      "/>",
+    ],
+    "description": "ChartPie component"
+  },
 }

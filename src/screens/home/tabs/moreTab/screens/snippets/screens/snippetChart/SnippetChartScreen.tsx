@@ -5,6 +5,7 @@ import ProgressChartApp from 'components/charts/progressChart/ProgressChartApp';
 import {vw} from 'fwk/constants/Dimentions';
 import ChartBarApp from 'components/charts/chartBar/ChartBarApp';
 import ChartStackedBarApp from 'components/charts/chartStackedBar/ChartStackedBarApp';
+import ChartPieApp from 'components/charts/chartPie/ChartPieApp';
 
 const SnippetChartScreen = () => {
   const snippets = [
@@ -66,6 +67,26 @@ const SnippetChartScreen = () => {
             [3, 6, 9],
             [4, 8, 12],
             [5, 10, 15],
+          ]}
+        />
+      ),
+    },
+    {
+      label: 'Torta',
+      prefix: 'appChartPie',
+      snippetComponent: (
+        <ChartPieApp
+          data={[
+            {
+              name: 'Leyenda 1',
+              value: 4,
+              color: 'yellow',
+            },
+            {
+              name: 'Leyenda 2',
+              value: 6,
+              color: 'red',
+            },
           ]}
         />
       ),
