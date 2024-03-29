@@ -81,4 +81,14 @@
     ],
     "description": "Spinner component"
   },
+  "ScreenCapture": {
+    "scope": "typescriptreact",
+    "prefix": "appScreenCapture",
+    "body": [
+      "<ScreenCaptureBlockerFwk$1>",
+      "  <Text>ScreenCapture Result</Text>",
+      "</ScreenCaptureBlockerFwk>"
+    ],
+    "description": "ScreenCapture component"
+  },
 }

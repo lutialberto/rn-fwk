@@ -14,5 +14,14 @@ export const useUserPreferencesTabSections = (
         },
       ],
     },
+    {
+      name: 'Seguridad',
+      items: [
+        {
+          name: 'Captura de pantalla',
+          onPress: () => navigator.navigate('Preferences/ScreenCapture'),
+        },
+      ],
+    },
   ];
 };

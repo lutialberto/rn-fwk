@@ -7,6 +7,7 @@ import ModalApp from 'components/containers/modals/modal/ModalApp';
 import SpinnerApp from 'components/containers/loading/spinner/SpinnerApp';
 import CarrouselApp from 'components/containers/carrousel/CarrouselApp';
 import TextCopyToClipboardApp from 'components/texts/textCopyToClipboard/TextCopyToClipboardApp';
+import ScreenCaptureBlockerFwk from 'fwk/components/containers/screenCaptureBlocker/ScreenCaptureBlocker';
 
 const SnippetComponentScreen = () => {
   const snippets = [
@@ -47,6 +48,15 @@ const SnippetComponentScreen = () => {
       label: 'Porta papeles',
       prefix: 'appClipboard',
       snippetComponent: <TextCopyToClipboardApp textToCopy={'texto...'} />,
+    },
+    {
+      label: 'Bloqueador de capturas de pantalla',
+      prefix: 'appScreenCaptureBlocker',
+      snippetComponent: (
+        <ScreenCaptureBlockerFwk>
+          <Text>ScreenCapture Result</Text>
+        </ScreenCaptureBlockerFwk>
+      ),
     },
   ];
   return <SnippetScreenTemplate title="Snippet de componentes" snippetList={snippets} />;

@@ -31,6 +31,10 @@ export const useMoreTabSections = (
         {name: 'Modal', onPress: () => navigator.navigate('Components/Modal')},
         {name: 'Carrusel', onPress: () => navigator.navigate('Components/Carrousel')},
         {name: 'Porta papeles', onPress: () => navigator.navigate('Components/Clipboard')},
+        {
+          name: 'Bloqueador de capturas de pantalla',
+          onPress: () => navigator.navigate('Components/ScreenCaptureBlocker'),
+        },
       ],
     },
     {

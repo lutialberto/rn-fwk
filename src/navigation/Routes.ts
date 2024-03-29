@@ -10,6 +10,7 @@ export const ROUTES = {
   HOME: 'Home',
   PREFERENCES: {
     THEME: `${ROUTE_PREFERENCES}/Theme`,
+    SCREEN_CAPTURE: `${ROUTE_PREFERENCES}/ScreenCapture`,
   },
   FORMS: {
     LOGIN: `${ROUTE_FORMS}/Login`,
@@ -37,6 +38,7 @@ export const ROUTES = {
     MODAL: `${ROUTE_COMPONENTS}/Modal`,
     CARROUSEL: `${ROUTE_COMPONENTS}/Carrousel`,
     CLIPBOARD: `${ROUTE_COMPONENTS}/Clipboard`,
+    SCREEN_CAPTURE_BLOCKER: `${ROUTE_COMPONENTS}/ScreenCaptureBlocker`,
   },
   HOOKS: {
     TOAST: `${ROUTE_HOOKS}/Toast`,

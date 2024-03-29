@@ -11,6 +11,7 @@ import SpinnerScreen from 'screens/home/tabs/moreTab/screens/components/spinner/
 import ModalScreen from 'screens/home/tabs/moreTab/screens/components/modal/ModalScreen';
 import CarrouselScreen from 'screens/home/tabs/moreTab/screens/components/carrousel/CarrouselScreen';
 import ClipboardScreen from 'screens/home/tabs/moreTab/screens/components/clipboard/ClipboardScreen';
+import ScreenCaptureBlockerScreen from 'screens/home/tabs/moreTab/screens/components/screenCaptureBlocker/ScreenCaptureBlockerScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -52,6 +53,10 @@ const componentsStacks = () => {
       <Stack.Screen
         name={ROUTES.COMPONENTS.CLIPBOARD as keyof MainStackParamList}
         component={ClipboardScreen}
+      />
+      <Stack.Screen
+        name={ROUTES.COMPONENTS.SCREEN_CAPTURE_BLOCKER as keyof MainStackParamList}
+        component={ScreenCaptureBlockerScreen}
       />
     </>
   );

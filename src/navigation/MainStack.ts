@@ -4,6 +4,8 @@ export type MainStackParamList = {
   Home: undefined;
 
   'Preferences/Theme': undefined;
+  'Preferences/ScreenCapture': undefined;
+
   'Forms/Login': undefined;
   'Forms/Register': undefined;
   'Forms/InputTypes': undefined;
@@ -26,6 +28,7 @@ export type MainStackParamList = {
   'Components/Modal': undefined;
   'Components/Carrousel': undefined;
   'Components/Clipboard': undefined;
+  'Components/ScreenCaptureBlocker': undefined;
 
   'Hooks/Toast': undefined;
   'Hooks/NetInfo': undefined;
