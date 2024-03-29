@@ -1,6 +1,6 @@
+import {PropsWithChildren} from 'react';
 import {StyleProp, ViewStyle} from 'react-native';
 
-export interface CardAppProps {
-  children: JSX.Element | JSX.Element[];
+export interface CardAppProps extends PropsWithChildren {
   style?: StyleProp<ViewStyle>;
 }

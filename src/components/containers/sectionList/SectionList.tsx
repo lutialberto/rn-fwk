@@ -16,7 +16,7 @@ export interface SectionListSectionsProps {
 
 export interface SectionListItemProps {
   name: string;
-  icon?: JSX.Element;
+  icon?: React.ReactNode;
   onPress?: () => void;
 }
 

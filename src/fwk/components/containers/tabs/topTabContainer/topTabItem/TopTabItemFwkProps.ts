@@ -1,10 +1,10 @@
+import {PropsWithChildren} from 'react';
 import {StyleProp, ViewStyle} from 'react-native/types';
 
-export interface TopTabItemFwkProps {
+export interface TopTabItemFwkProps extends PropsWithChildren {
   name: string;
-  children: JSX.Element;
   label: string;
-  labelComponent?: (focused: boolean) => JSX.Element;
+  labelComponent?: (focused: boolean) => React.ReactNode;
   tabScreenOptions?: {
     tabBarIndicatorStyle?: StyleProp<ViewStyle>;
   };

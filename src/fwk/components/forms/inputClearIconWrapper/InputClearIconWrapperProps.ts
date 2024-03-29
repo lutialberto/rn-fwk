@@ -1,5 +1,6 @@
-export interface InputClearIconWrapperProps extends ClearInputProps {
-  children: JSX.Element;
+import {PropsWithChildren} from 'react';
+
+export interface InputClearIconWrapperProps extends ClearInputProps, PropsWithChildren {
   valueIsEmpty: boolean;
 }
 

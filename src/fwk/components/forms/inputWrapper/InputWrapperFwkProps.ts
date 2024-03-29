@@ -1,16 +1,16 @@
+import {PropsWithChildren} from 'react';
 import {StyleProp, TextStyle, ViewStyle} from 'react-native';
 
-export interface InputWrapperFwkProps {
-  children: JSX.Element;
+export interface InputWrapperFwkProps extends PropsWithChildren {
   childrenStyle?: StyleProp<ViewStyle>;
   label?: {
     value?: string;
     style?: StyleProp<TextStyle>;
-    component?: JSX.Element;
+    component?: React.ReactNode;
   };
   error: {
     value: string;
     style?: StyleProp<TextStyle>;
-    component?: JSX.Element;
+    component?: React.ReactNode;
   };
 }

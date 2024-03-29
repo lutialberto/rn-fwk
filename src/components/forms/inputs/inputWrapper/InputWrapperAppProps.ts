@@ -1,5 +1,6 @@
-export interface InputWrapperAppProps {
+import {PropsWithChildren} from 'react';
+
+export interface InputWrapperAppProps extends PropsWithChildren {
   label?: string;
   error?: string;
-  children: JSX.Element;
 }

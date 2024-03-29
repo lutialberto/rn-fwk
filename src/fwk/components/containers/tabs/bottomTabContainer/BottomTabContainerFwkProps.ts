@@ -1,11 +1,8 @@
+import {PropsWithChildren} from 'react';
 import {StyleProp, TextStyle, ViewStyle} from 'react-native';
 
 export interface BottonTabContainerFwkProps {
-  tabItems: {
-    label: string;
-    name: string;
-    children: JSX.Element;
-  }[];
+  tabItems: TabItemsProps[];
   navigatorProps?: {
     tabsContainerStyle?: StyleProp<ViewStyle>;
     tabItem?: {
@@ -17,3 +14,9 @@ export interface BottonTabContainerFwkProps {
     initialRouteName?: string;
   };
 }
+
+interface TabItemsProps extends PropsWithChildren {
+  label: string;
+  name: string;
+}
+[];

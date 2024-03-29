@@ -6,7 +6,7 @@ import {Colors, useTheme} from 'hooks/theme';
 
 export interface SectionItemProps {
   name: string;
-  icon?: JSX.Element;
+  icon?: React.ReactNode;
   onPress?: () => void;
 }
 

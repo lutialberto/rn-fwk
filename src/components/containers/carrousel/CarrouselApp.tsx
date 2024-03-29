@@ -4,7 +4,7 @@ import {useTheme} from 'hooks/theme';
 import CarrouselFwk from 'fwk/components/containers/carrousel/CarrouselFwk';
 
 interface CarrouselAppProps {
-  items: JSX.Element[];
+  items: React.ReactNode[];
   containerStyle?: StyleProp<ViewStyle>;
   itemStyle?: StyleProp<ViewStyle>;
 }

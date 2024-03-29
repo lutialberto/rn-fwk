@@ -4,7 +4,7 @@ export interface ButtonFwkProps {
   onPress: () => void;
   label?: string;
   enabled?: boolean;
-  icon?: JSX.Element;
+  icon?: React.ReactNode;
   containerStyle?: StyleProp<ViewStyle>;
   labelStyle?: StyleProp<TextStyle>;
   labelComponent?: JSX.Element;

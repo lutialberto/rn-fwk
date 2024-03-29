@@ -1,6 +1,6 @@
+import {PropsWithChildren} from 'react';
 import {StyleProp, ViewStyle} from 'react-native/types';
 
-export interface ScreenContainerFwkProps {
-  children: JSX.Element | JSX.Element[];
+export interface ScreenContainerFwkProps extends PropsWithChildren {
   style?: StyleProp<ViewStyle>;
 }

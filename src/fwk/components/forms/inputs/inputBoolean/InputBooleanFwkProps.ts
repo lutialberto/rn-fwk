@@ -7,6 +7,6 @@ export interface InputBooleanFwkProps<T extends FieldValues> {
     style?: StyleProp<TextStyle>;
     enabled?: boolean;
     borderStyle?: StyleProp<ViewStyle>;
-    children?: JSX.Element;
+    children?: React.ReactNode;
   };
 }

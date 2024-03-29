@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import PagerView from 'react-native-pager-view';
 
 export interface CarrouselFwkProps {
-  items: JSX.Element[];
+  items: React.ReactNode[];
   itemStyle?: StyleProp<ViewStyle>;
   indexColor?: string;
   indexActiveColor?: string;
