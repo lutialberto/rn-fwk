@@ -29,7 +29,7 @@ const ScreenContainerApp = ({
   const styles = getStyles(colors);
 
   return (
-    <ScreenContainerFwk style={[styles.container, style]}>
+    <ScreenContainerFwk style={styles.container}>
       <>
         <View style={styles.header}>
           <View style={!showBackButton && styles.side}>
@@ -38,7 +38,7 @@ const ScreenContainerApp = ({
           {title && <TextApp style={[textStyles.screenTitle, styles.screenTitle]}>{title}</TextApp>}
           <View style={styles.side} />
         </View>
-        {children}
+        <View style={[styles.childrenContainer, style]}>{children}</View>
       </>
     </ScreenContainerFwk>
   );
@@ -61,6 +61,9 @@ const getStyles = (colors: Colors) => {
     },
     screenTitle: {
       flex: 3,
+    },
+    childrenContainer: {
+      flex: 1,
     },
   });
 };

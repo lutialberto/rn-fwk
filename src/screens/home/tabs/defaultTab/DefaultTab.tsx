@@ -45,7 +45,7 @@ export default DefaultTab;
 
 const styles = StyleSheet.create({
   screenContainer: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 15,
   },
   screenTitle: {
     textAlign: 'center',
