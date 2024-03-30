@@ -29,7 +29,7 @@ function InputBooleanApp<T extends FieldValues>(props: InputBooleanAppProps<T>) 
   const {textStyles} = useTextStyles();
 
   return (
-    <View>
+    <View style={props.containerStyle}>
       <View style={styles.container}>
         <InputBooleanFwk
           formControl={props.formControl}

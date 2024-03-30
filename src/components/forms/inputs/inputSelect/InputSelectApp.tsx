@@ -31,7 +31,7 @@ const InputSelectApp = <T extends FieldValues>(props: InputSelectAppProps<T>) =>
   const {textStyles} = useTextStyles();
 
   return (
-    <InputWrapperApp label={props.label} error={props.error}>
+    <InputWrapperApp label={props.label} error={props.error} containerStyle={props.containerStyle}>
       <InputSelectFwk
         {...props}
         selectInput={{

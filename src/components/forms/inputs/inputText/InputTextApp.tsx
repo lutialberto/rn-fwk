@@ -28,7 +28,7 @@ function InputTextApp<T extends FieldValues>(props: InputTextAppProps<T>) {
   const styles = getStyles(colors);
 
   return (
-    <InputWrapperApp label={props.label} error={props.error}>
+    <InputWrapperApp label={props.label} error={props.error} containerStyle={props.containerStyle}>
       <InputTextFwk
         {...props}
         textInput={{

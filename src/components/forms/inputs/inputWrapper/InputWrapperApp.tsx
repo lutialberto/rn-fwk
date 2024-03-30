@@ -20,7 +20,7 @@ import {useTextStyles} from 'components/texts/hooks/useTextStyles';
  * @param error - input wrapper error
  * @param label - input wrapper label
  */
-const InputWrapperApp = ({children, error, label}: InputWrapperAppProps) => {
+const InputWrapperApp = ({children, error, label, containerStyle}: InputWrapperAppProps) => {
   const {colors} = useTheme();
   const styles = getStyles(colors);
   const {textStyles} = useTextStyles();
@@ -32,6 +32,7 @@ const InputWrapperApp = ({children, error, label}: InputWrapperAppProps) => {
         value: error ?? '',
         component: <TextApp style={textStyles.inputError}>{error}</TextApp>,
       }}
+      containerStyle={containerStyle}
       childrenStyle={[styles.children, !!error && {borderBottomColor: colors.nonThemeColors.red}]}>
       {children}
     </InputWrapperFwk>

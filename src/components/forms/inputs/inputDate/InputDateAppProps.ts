@@ -8,4 +8,5 @@ export type InputDateAppProps<T extends FieldValues> = PartiallyOptional<
 > & {
   error?: string;
   label?: string;
+  containerStyle?: any;
 };

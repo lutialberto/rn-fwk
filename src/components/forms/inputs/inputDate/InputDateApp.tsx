@@ -29,7 +29,7 @@ function InputDateApp<T extends FieldValues>(props: InputDateAppProps<T>) {
   };
 
   return (
-    <InputWrapperApp error={props.error} label={props.label}>
+    <InputWrapperApp error={props.error} label={props.label} containerStyle={props.containerStyle}>
       <InputDateFwk
         {...props}
         dateInput={{
