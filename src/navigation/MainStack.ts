@@ -29,6 +29,7 @@ export type MainStackParamList = {
   'Components/Carrousel': undefined;
   'Components/Clipboard': undefined;
   'Components/ScreenCaptureBlocker': undefined;
+  'Components/TextToSpeech': undefined;
 
   'Hooks/Toast': undefined;
   'Hooks/NetInfo': undefined;

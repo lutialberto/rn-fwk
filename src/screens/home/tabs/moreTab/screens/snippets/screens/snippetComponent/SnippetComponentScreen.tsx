@@ -26,7 +26,12 @@ const SnippetComponentScreen = () => {
       label: 'Spinner',
       prefix: 'appSpinner',
       snippetComponent: (
-        <SpinnerApp visible={true}>
+        <SpinnerApp
+          visible={true}
+          style={{
+            //flex: 1,//usar este
+            height: 100, //o este
+          }}>
           <Text>Spinner Result</Text>
         </SpinnerApp>
       ),

@@ -39,6 +39,7 @@ export const ROUTES = {
     CARROUSEL: `${ROUTE_COMPONENTS}/Carrousel`,
     CLIPBOARD: `${ROUTE_COMPONENTS}/Clipboard`,
     SCREEN_CAPTURE_BLOCKER: `${ROUTE_COMPONENTS}/ScreenCaptureBlocker`,
+    TEXT_TO_SPEECH: `${ROUTE_COMPONENTS}/TextToSpeech`,
   },
   HOOKS: {
     TOAST: `${ROUTE_HOOKS}/Toast`,

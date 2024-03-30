@@ -35,6 +35,7 @@ export const useMoreTabSections = (
           name: 'Bloqueador de capturas de pantalla',
           onPress: () => navigator.navigate('Components/ScreenCaptureBlocker'),
         },
+        {name: 'De texto a voz', onPress: () => navigator.navigate('Components/TextToSpeech')},
       ],
     },
     {

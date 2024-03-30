@@ -12,6 +12,7 @@ import ModalScreen from 'screens/home/tabs/moreTab/screens/components/modal/Moda
 import CarrouselScreen from 'screens/home/tabs/moreTab/screens/components/carrousel/CarrouselScreen';
 import ClipboardScreen from 'screens/home/tabs/moreTab/screens/components/clipboard/ClipboardScreen';
 import ScreenCaptureBlockerScreen from 'screens/home/tabs/moreTab/screens/components/screenCaptureBlocker/ScreenCaptureBlockerScreen';
+import TextToSpeechScreen from 'screens/home/tabs/moreTab/screens/components/textToSpeech/TextToSpeechScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -57,6 +58,10 @@ const componentsStacks = () => {
       <Stack.Screen
         name={ROUTES.COMPONENTS.SCREEN_CAPTURE_BLOCKER as keyof MainStackParamList}
         component={ScreenCaptureBlockerScreen}
+      />
+      <Stack.Screen
+        name={ROUTES.COMPONENTS.TEXT_TO_SPEECH as keyof MainStackParamList}
+        component={TextToSpeechScreen}
       />
     </>
   );
