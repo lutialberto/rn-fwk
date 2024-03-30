@@ -43,7 +43,7 @@ function InputBooleanApp<T extends FieldValues>(props: InputBooleanAppProps<T>) 
             children: <View style={[styles.value, styles.trueValue]} />,
           }}
         />
-        <TextApp>{props.label}</TextApp>
+        <TextApp style={textStyles.inputLabel}>{props.label}</TextApp>
       </View>
       {props.error && <TextApp style={textStyles.inputError}>{props.error}</TextApp>}
     </View>

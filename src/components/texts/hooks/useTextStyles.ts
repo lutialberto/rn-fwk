@@ -29,6 +29,13 @@ const getStyles = (colors: Colors) => {
       color: colors.nonThemeColors.red,
       fontSize: 12,
     },
+    inputLabel: {
+      color: colors.themeColors.fontColor,
+      fontSize: 14,
+      fontFamily: Fonts.PrimaryBold,
+      textTransform: 'uppercase',
+      letterSpacing: 2,
+    },
     screenTitle: {
       fontSize: 24,
       textAlign: 'center',

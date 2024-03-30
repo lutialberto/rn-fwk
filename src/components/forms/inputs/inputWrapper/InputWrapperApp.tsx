@@ -27,7 +27,7 @@ const InputWrapperApp = ({children, error, label, containerStyle}: InputWrapperA
 
   return (
     <InputWrapperFwk
-      label={{component: label ? <TextApp style={styles.label}>{label}</TextApp> : <></>}}
+      label={{component: label ? <TextApp style={textStyles.inputLabel}>{label}</TextApp> : <></>}}
       error={{
         value: error ?? '',
         component: <TextApp style={textStyles.inputError}>{error}</TextApp>,
