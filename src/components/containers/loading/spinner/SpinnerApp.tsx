@@ -6,10 +6,20 @@ import {useTheme} from 'hooks/theme';
 /**
  * @description Application spinner component
  * @example Minimal Example
- * <SpinnerApp visible={true} />
+ * <SpinnerApp
+ *  visible={true}
+ *  style={{
+ *   height: 100,//usar este
+ *   flex: 1,//o este
+ *  }}
+ * />
  * @example Full Example
  * <SpinnerApp
  *  visible={true}
+ *  style={{
+ *   height: 100,//usar este
+ *   flex: 1,//o este
+ *  }}
  *  variant={'default'}
  * >
  *   <Text>Content</Text>

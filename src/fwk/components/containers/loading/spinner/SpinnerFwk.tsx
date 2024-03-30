@@ -20,9 +20,14 @@ import {SpinnerFwkProps} from './SpinnerFwkProps';
  */
 const SpinnerFwk = ({visible, color, style, children, variant = 'default'}: SpinnerFwkProps) => {
   return (
-    <View style={[styles.container, variant === 'overlap' && styles.overlay, style]}>
+    <View style={[style]}>
       {(variant === 'overlap' || !visible) && children}
-      <ActivityIndicator animating={visible} color={color ?? 'blue'} size="large" />
+      <ActivityIndicator
+        style={styles.overlay}
+        animating={visible}
+        color={color ?? 'blue'}
+        size="large"
+      />
     </View>
   );
 };
@@ -30,10 +35,6 @@ const SpinnerFwk = ({visible, color, style, children, variant = 'default'}: Spin
 export default SpinnerFwk;
 
 const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   overlay: {
     position: 'absolute',
     bottom: 0,

@@ -75,6 +75,10 @@
     "body": [
       "<SpinnerApp$1",
       " visible={true}",
+      " style={{",
+      "  //flex: 1,//usar este",
+      "  //height: 100,//o este",
+      " }}",
       ">",
       "  <Text>Spinner Result</Text>",
       "</SpinnerApp>"

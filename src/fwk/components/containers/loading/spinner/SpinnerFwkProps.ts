@@ -4,6 +4,6 @@ import {StyleProp, ViewStyle} from 'react-native/types';
 export interface SpinnerFwkProps extends PropsWithChildren {
   visible: boolean;
   color?: string;
-  style?: StyleProp<ViewStyle>;
+  style: StyleProp<ViewStyle>;
   variant?: 'default' | 'overlap';
 }
