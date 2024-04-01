@@ -4,6 +4,7 @@ import {useTextStyles} from '../hooks/useTextStyles';
 
 /**
  * @description Application text component
+ * @snippet appText
  * @example Minimal Example
  * <TextApp>GenericText</TextApp>
  * @example Full Example

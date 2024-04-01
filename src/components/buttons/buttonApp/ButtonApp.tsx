@@ -10,6 +10,7 @@ import {Variant} from './models/Variant';
 
 /**
  * @description Application button component
+ * @snippet appButton
  * @example Minimal Example
  * <ButtonApp onPress={() => { }} />
  * @example Full Example
