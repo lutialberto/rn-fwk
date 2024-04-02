@@ -41,6 +41,7 @@ export const ROUTES = {
     SCREEN_CAPTURE_BLOCKER: `${ROUTE_COMPONENTS}/ScreenCaptureBlocker`,
     TEXT_TO_SPEECH: `${ROUTE_COMPONENTS}/TextToSpeech`,
     VIDEO: `${ROUTE_COMPONENTS}/Video`,
+    ERROR_BOUNDARY: `${ROUTE_COMPONENTS}/ErrorBoundary`,
   },
   HOOKS: {
     TOAST: `${ROUTE_HOOKS}/Toast`,

@@ -31,6 +31,7 @@ export type MainStackParamList = {
   'Components/ScreenCaptureBlocker': undefined;
   'Components/TextToSpeech': undefined;
   'Components/Video': undefined;
+  'Components/ErrorBoundary': undefined;
 
   'Hooks/Toast': undefined;
   'Hooks/NetInfo': undefined;

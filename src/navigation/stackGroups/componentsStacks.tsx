@@ -14,6 +14,7 @@ import ClipboardScreen from 'screens/home/tabs/moreTab/screens/components/clipbo
 import ScreenCaptureBlockerScreen from 'screens/home/tabs/moreTab/screens/components/screenCaptureBlocker/ScreenCaptureBlockerScreen';
 import TextToSpeechScreen from 'screens/home/tabs/moreTab/screens/components/textToSpeech/TextToSpeechScreen';
 import VideoScreen from 'screens/home/tabs/moreTab/screens/components/video/VideoScreen';
+import ErrorBoundaryScreen from 'screens/home/tabs/moreTab/screens/components/errorBoundary/ErrorBoundaryScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -67,6 +68,10 @@ const componentsStacks = () => {
       <Stack.Screen
         name={ROUTES.COMPONENTS.VIDEO as keyof MainStackParamList}
         component={VideoScreen}
+      />
+      <Stack.Screen
+        name={ROUTES.COMPONENTS.ERROR_BOUNDARY as keyof MainStackParamList}
+        component={ErrorBoundaryScreen}
       />
     </>
   );
