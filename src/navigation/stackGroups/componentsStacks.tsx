@@ -13,6 +13,7 @@ import CarrouselScreen from 'screens/home/tabs/moreTab/screens/components/carrou
 import ClipboardScreen from 'screens/home/tabs/moreTab/screens/components/clipboard/ClipboardScreen';
 import ScreenCaptureBlockerScreen from 'screens/home/tabs/moreTab/screens/components/screenCaptureBlocker/ScreenCaptureBlockerScreen';
 import TextToSpeechScreen from 'screens/home/tabs/moreTab/screens/components/textToSpeech/TextToSpeechScreen';
+import VideoScreen from 'screens/home/tabs/moreTab/screens/components/video/VideoScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -62,6 +63,10 @@ const componentsStacks = () => {
       <Stack.Screen
         name={ROUTES.COMPONENTS.TEXT_TO_SPEECH as keyof MainStackParamList}
         component={TextToSpeechScreen}
+      />
+      <Stack.Screen
+        name={ROUTES.COMPONENTS.VIDEO as keyof MainStackParamList}
+        component={VideoScreen}
       />
     </>
   );

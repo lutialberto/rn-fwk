@@ -30,6 +30,7 @@ export type MainStackParamList = {
   'Components/Clipboard': undefined;
   'Components/ScreenCaptureBlocker': undefined;
   'Components/TextToSpeech': undefined;
+  'Components/Video': undefined;
 
   'Hooks/Toast': undefined;
   'Hooks/NetInfo': undefined;

@@ -36,6 +36,7 @@ export const useMoreTabSections = (
           onPress: () => navigator.navigate('Components/ScreenCaptureBlocker'),
         },
         {name: 'De texto a voz', onPress: () => navigator.navigate('Components/TextToSpeech')},
+        {name: 'Video', onPress: () => navigator.navigate('Components/Video')},
       ],
     },
     {
